@@ -23,8 +23,10 @@
     <section id="home">
     </section>
     <section id="about">
-      <h1>THIS IS THE PRODUCT</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laborum.</p>
+      <div class="about-text" data-aos="fade-right">
+        <h1>THIS IS THE PRODUCT</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laborum.</p>
+      </div>
       <div class="about-images">
         <img src="images/section_2/IMG_20190509_181356_545.jpg" alt="">
         <img src="images/section_2/IMG_20190926_115318_655.jpg" alt="">
@@ -64,7 +66,7 @@
     </section>
 
     <section id="me" >
-      <div class="me-text" data-aos="fade-in" >
+      <div class="me-text" data-aos="fade-left" >
         <h1 >THIS IS ME</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laborum.</p>
       </div>
@@ -78,9 +80,12 @@
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
-    </script>
-    <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>">
+    AOS.init({
+      offset: 100,
+      mirror: true
+    });
+  </script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 </body>
 </html>

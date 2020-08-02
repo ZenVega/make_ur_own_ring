@@ -14,19 +14,16 @@ a {
 }
 
 body {
-  background: #333;
-  color: #fff;
+  background: #fff;
+  color: #333;
   line-height: 1.6;
-  height: 100vh;
-  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
 }
 
 .container {
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 .navbar {
@@ -54,7 +51,7 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #f4f4f4;
+  color: #fff;
 }
 
 .navbar ul li a:hover {
@@ -66,10 +63,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  width: 100%;
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 /* SECTION IMAGES */
@@ -78,16 +73,18 @@ section#home {
   background: url('images/section_1/Make_Your_Own_Ring_All_black.png')no-repeat center center;
   background-size: 60vh;
   background-color: #fff;
+  background-position: center;
 }
 section#about {
+  background-color: #fff;
   flex-direction: column;
+ 
 }
-.about-images {
-  flex-direction: column;
-}
+
 
 .about-images img{
   width: 30vw;
+  margin: 1vh;
 }
 
 
@@ -201,6 +198,18 @@ section#shop{
   .navbar ul li {
     margin: 0;
     padding: 0.5em;
+  }
+
+  section#about {
+    flex-direction: row;
+  }
+  
+  .about-images {
+    top: 10vh;
+  }
+  .about-images img{
+    margin: 2vh;
+    width: 25vh;
   }
 
   section#how{
