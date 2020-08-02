@@ -1,0 +1,208 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'HKGroteskRegular';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+a {
+  color: #fff;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  opacity: 0.7;
+}
+
+.navbar ul {
+  display:flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+  color: #75b6b3;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* SECTION IMAGES */
+
+section#home {
+  background: url('images/section_1/Make_Your_Own_Ring_All_white.png')no-repeat center center;
+  background-size: 60vh;
+  background-color: rgb(0,0,0);
+}
+section#about {
+  flex-direction: column;
+}
+.about-images {
+  flex-direction: column;
+}
+
+.about-images img{
+  width: 30vw;
+}
+
+
+section#how{
+
+}
+
+.how-text {
+  position: relative;
+  margin: 1rem;
+}
+
+.how-images{
+  display: flex;
+  position: absolute;
+  height: 20vw;
+  width: 100vw;
+  transition: 400ms;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 3vw;
+}
+.slide-container{
+  position: relative;
+  width: 24vw;
+  height: 24vw;
+  border: solid white 1px;
+  overflow: hidden;
+}
+
+.next-btn, .prev-btn {
+  position: relative;
+  margin: 2vw;
+}
+
+.next-btn:hover, .prev-btn:hover {
+  color: #75b6b3;
+  cursor: pointer;
+}
+
+.how-images img{
+  margin: 2vw 1vw;
+  width: 20vw;
+  height: 20vw;
+}
+#i1{
+  left: 0vw;
+  margin-left: 2vw;
+}
+#i2{
+  left: 21vw;
+}
+#i3{
+  left: 42vw;
+}
+#i4{
+  left: 63vw;
+}
+
+
+#d2, #d3, #d4 {
+  display: none;
+}
+
+
+
+
+section#me {
+  background: url('/images/section_3/aboutMe.png') no-repeat center right;
+  background-size: 100vh auto ;
+  background-color: #000;
+  text-align: left;
+  align-items: flex-start;
+
+}
+
+section#me .text {
+  padding-left: 3rem;
+}
+
+#shopLink {
+  padding: 5px 10px;
+  border:solid white 1px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+#shopLink:hover{
+  color: rgba(0,0,0,0.5);
+  background-color: white;
+}
+
+section#shop{
+  background-image: url("./images/section_5/workshop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px){
+
+  .navbar ul {
+    width: 90%;
+    margin:0 5%;
+    justify-content: space-evenly;
+  }
+
+  .navbar ul li {
+    margin: 0;
+    padding: 0.5em;
+  }
+
+  section#how{
+    flex-direction: column;
+  }
+}
