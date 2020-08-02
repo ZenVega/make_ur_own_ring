@@ -159,7 +159,7 @@ section#how{
 
 
 section#me {
-  background: url('images/section_3/aboutMe.png') no-repeat center right;
+  background: url('./images/section_3/aboutMe.png') no-repeat center right;
   background-size: 100vh auto ;
   background-color: #000;
   text-align: left;
