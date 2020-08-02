@@ -1,0 +1,22 @@
+{
+  "name": "make_ur_own",
+  "version": "1.0.0",
+  "description": "make ur ring page",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZenVega/make_ur_own_ring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZenVega/make_ur_own_ring/issues"
+  },
+  "homepage": "https://github.com/ZenVega/make_ur_own_ring#readme",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
+}

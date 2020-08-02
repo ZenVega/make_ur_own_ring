@@ -1,3 +1,4 @@
+
 const nxtBtn = document.querySelector(".next-btn");
 const preBtn = document.querySelector(".prev-btn");
 
@@ -39,7 +40,8 @@ let currentSlide = 1;
 });
 
 const goToSlide = (slideNumber) => {
-    slideContainer.style.transform = "translateX(-" + (currentSlide-1)*22 + "vw)";
-    descriptions.map(description => description.style.display = "none");
-    descriptions[currentSlide].style.display = "block";
+  slideContainer.style.transform = "translateX(-" + (currentSlide-1)*22 + "vw)";
+  descriptions.map(description => description.style.display = "none");
+  descriptions[currentSlide].style.display = "block";
 }
+
