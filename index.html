@@ -14,7 +14,7 @@
     <nav class="navbar">
       <ul>
         <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
+        <li><a href="#box">about</a></li>
         <li><a href="#how">how</a></li>
         <li><a href="#me">me</a></li>
         <li><a href="#shop">shop</a></li>
@@ -22,9 +22,12 @@
     </nav>
     <section id="home">
     </section>
+    <section id="box">
+      <h1>THIS IS WHAT U GET</h1>
+    </section>
     <section id="about">
       <div class="about-text" data-aos="fade-right">
-        <h1>THIS IS THE PRODUCT</h1>
+        <h1>THIS IS WHAT THE RESULT CAN LOOK LIKE</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laborum.</p>
       </div>
       <div class="about-images">
@@ -34,7 +37,7 @@
       </div>
     </section>
     <section id="how">
-      <div class="how-text">
+      <div class="how-text" data-aos="fade-left">
         <h1>HOW DOES IT WORK</h1>
       </div>
       
@@ -66,7 +69,7 @@
     </section>
 
     <section id="me" >
-      <div class="me-text" data-aos="fade-left" >
+      <div class="me-text" data-aos="fade-right" >
         <h1 >THIS IS ME</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laborum.</p>
       </div>
@@ -81,8 +84,9 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
-      offset: 100,
-      mirror: true
+      offset: 80,
+      mirror: true,
+      delay: 200
     });
   </script>
   <script src="main.js"></script>

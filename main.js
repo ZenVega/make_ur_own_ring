@@ -16,8 +16,7 @@ let currentSlide = 1;
 
 
 //next button
-['click', 'mouseenter'].forEach(event => {
-  nxtBtn.addEventListener(event, () => {
+  nxtBtn.addEventListener('click', () => {
     if(currentSlide == 4){
       return;
     } else {
@@ -25,11 +24,10 @@ let currentSlide = 1;
     }
     goToSlide(currentSlide);
   })  
-});
+
 
 //prev button
-['click', 'mouseenter'].forEach(event => {
-  preBtn.addEventListener(event, () => {
+  preBtn.addEventListener('click', () => {
     if(currentSlide == 1){
       return;
     } else {
@@ -37,7 +35,6 @@ let currentSlide = 1;
     }
     goToSlide(currentSlide);
   })
-});
 
 const goToSlide = (slideNumber) => {
   slideContainer.style.transform = "translateX(-" + (currentSlide-1)*22 + "vw)";

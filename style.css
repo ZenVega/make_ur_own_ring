@@ -9,6 +9,11 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+h1{
+  font-size: x-large;
+}
+
 a {
   color: #fff;
 }
@@ -62,7 +67,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100vh;
   scroll-snap-align: start;
 }
@@ -72,70 +76,86 @@ section {
 section#home {
   background: url('images/section_1/Make_Your_Own_Ring_All_black.png')no-repeat center center;
   background-size: 60vh;
-  background-color: #fff;
   background-position: center;
 }
-section#about {
-  background-color: #fff;
-  flex-direction: column;
- 
+
+section#box{
+  background: url("images/section_1/black-box.jpg");
+  height: 100vh; 
+  background-position: center; 
+  background-size: cover;
+  color: #fff;
+  justify-content: center;
 }
 
+section#about {
+  flex-direction: column;
+  justify-content: left;
+  height: 50vw;
+}
+
+.about-text {
+  width: 92vw;
+  margin: 4vw;
+}
+
+
+.about-images{
+  display: flex;
+  justify-content: space-between;
+  width: 92vw;
+}
 
 .about-images img{
   width: 30vw;
-  margin: 1vh;
 }
 
 
 section#how{
-
+  height: 45vw;
 }
 
 .how-text {
-  position: relative;
-  margin: 1rem;
+  margin-top: 80px;
+  margin-right: 4vw;
+  margin-bottom: 2vh;
+  align-self: flex-end;
 }
 
-.how-images{
-  display: flex;
-  position: absolute;
-  height: 20vw;
-  width: 100vw;
-  transition: 400ms;
-}
-.slider {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 3vw;
-}
+
 .slide-container{
-  position: relative;
-  width: 24vw;
+  width: 92vw;
   height: 24vw;
-  border: solid white 1px;
-  overflow: hidden;
 }
+
 
 .next-btn, .prev-btn {
-  position: relative;
-  margin: 2vw;
+  display:none;
 }
 
-.next-btn:hover, .prev-btn:hover {
-  color: #75b6b3;
-  cursor: pointer;
+.how-images {
+  width: 92vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 .how-images img{
-  margin: 2vw 1vw;
-  width: 20vw;
-  height: 20vw;
+  width: 22vw;
+  height: 22vw;
 }
+.descriptions{
+  display: flex;
+  width: 92vw;
+  justify-content: space-between;
+}
+
+.descriptions h3{
+  padding: 1vw;
+  width: 22vw;
+}
+
 #i1{
-  left: 0vw;
-  margin-left: 2vw;
+  margin-left: 0vw;
 }
 #i2{
   left: 21vw;
@@ -148,9 +168,6 @@ section#how{
 }
 
 
-#d2, #d3, #d4 {
-  display: none;
-}
 
 
 
@@ -161,7 +178,7 @@ section#me {
   background-color: #000;
   text-align: left;
   align-items: flex-start;
-
+  justify-content: center;
 }
 
 section#me .me-text {
@@ -185,6 +202,7 @@ section#shop{
   background-image: url("./images/section_5/workshop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  justify-content: center;
 }
 
 @media screen and (max-width: 600px){
@@ -215,4 +233,65 @@ section#shop{
   section#how{
     flex-direction: column;
   }
+  .how-text {
+    position: relative;
+    margin: 1rem;
+  }
+  
+  .how-images{
+    display: flex;
+    position: absolute;
+    height: 20vw;
+    width: 100vw;
+    transition: 400ms;
+  }
+  .slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .slide-container{
+    position: relative;
+    width: 70vw;
+    height: 70vw;
+    overflow: hidden;
+  }
+  
+  .next-btn, .prev-btn {
+    position: relative;
+    margin: 2vw;
+  }
+  
+  .next-btn:hover, .prev-btn:hover {
+    color: #75b6b3;
+    cursor: pointer;
+  }
+  
+  .how-images img{
+    margin: 2vw 1vw;
+    width: 100%;
+    height: 70vw;
+  }
+
+
+  #i1{
+    left: 0vw;
+    margin-left: 0vw;
+  }
+  #i2{
+    left: 21vw;
+  }
+  #i3{
+    left: 42vw;
+  }
+  #i4{
+    left: 63vw;
+  }
+  
+  
+  #d2, #d3, #d4 {
+    display: none;
+  }
+  
+  
 }
