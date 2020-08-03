@@ -1,6 +1,5 @@
 
-const nxtBtn = document.querySelector(".next-btn");
-const preBtn = document.querySelector(".prev-btn");
+const swipeTag = document.querySelector("#swipe-tag");
 
 let descriptions = [];
 descriptions[1] = document.querySelector("#d1");
@@ -15,8 +14,19 @@ const slideContainer = document.querySelector('.how-images');
 let currentSlide = 1;
 
 
-//next button
-  nxtBtn.addEventListener('click', () => {
+//swipe left
+  slider.addEventListener('swiped-left', () => {
+    swipeTag.style.display = 'none';
+    if(currentSlide == 4){
+      return;
+    } else {
+      currentSlide++;
+    }
+    goToSlide(currentSlide);
+  })  
+  
+  slider.addEventListener('click', () => {
+    swipeTag.style.display = 'none';
     if(currentSlide == 4){
       return;
     } else {
@@ -25,9 +35,8 @@ let currentSlide = 1;
     goToSlide(currentSlide);
   })  
 
-
-//prev button
-  preBtn.addEventListener('click', () => {
+//swipe-right
+  slider.addEventListener('swiped-right', () => {
     if(currentSlide == 1){
       return;
     } else {
@@ -37,7 +46,7 @@ let currentSlide = 1;
   })
 
 const goToSlide = (slideNumber) => {
-  slideContainer.style.transform = "translateX(-" + (currentSlide-1)*22 + "vw)";
+  slideContainer.style.transform = "translateX(-" + (currentSlide-1)*92 + "vw)";
   descriptions.map(description => description.style.display = "none");
   descriptions[currentSlide].style.display = "block";
 }
