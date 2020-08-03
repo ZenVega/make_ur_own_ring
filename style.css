@@ -36,7 +36,7 @@ body {
   top: 0;
   z-index: 2;
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   background: #000;
   opacity: 0.7;
@@ -132,9 +132,6 @@ section#how{
   display: none;
 }
 
-.next-btn, .prev-btn {
-  display:none;
-}
 
 .how-images {
   width: 92vw;
@@ -224,9 +221,14 @@ section#shop{
     padding: 0.5em;
   }
 
-  section#about {
+  .burger{
+
   }
-  
+
+  .bBar {
+    
+  }
+
   .about-images {
     top: 10vh;
     flex-wrap: wrap;
@@ -254,7 +256,7 @@ section#shop{
     height: 92vw;
   }
   #swipe-tag {
-    display: block;
+  display: block;
    position: absolute; 
    z-index:2;
    left:50%;
@@ -284,35 +286,13 @@ section#shop{
 
   .descriptions{
     text-align: center;
-    width: 92vw;
   }
   
   .descriptions h3{
     padding: 1vw;
     width: 92vw;
   }
-  .next-btn:hover, .prev-btn:hover {
-    color: #75b6b3;
-    cursor: pointer;
-  }
-  
 
-
-  #i1{
-    left: 0vw;
-    margin-left: 0vw;
-  }
-  #i2{
-    left: 21vw;
-  }
-  #i3{
-    left: 42vw;
-  }
-  #i4{
-    left: 63vw;
-  }
-  
-  
   #d2, #d3, #d4 {
     display: none;
   }
