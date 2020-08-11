@@ -1,4 +1,17 @@
+//burger
+const burger = document.querySelector('#burger'); 
+const bars = document.querySelector('#bars');
+const navbar = document.querySelector('.navbar'); 
 
+
+bars.addEventListener('click', ()=> {
+  burger.classList.toggle('burger-open');
+  navbar.classList.toggle('navbar-open');
+  bars.classList.toggle('bars-open');
+  console.log(burger.classList , navbar.classList)
+})
+
+//slider
 const swipeTag = document.querySelector("#swipe-tag");
 
 let descriptions = [];
@@ -6,7 +19,6 @@ descriptions[1] = document.querySelector("#d1");
 descriptions[2] = document.querySelector("#d2");
 descriptions[3] = document.querySelector("#d3");
 descriptions[4] = document.querySelector("#d4");
-
 
 
 const slider = document.querySelector(".slider");

@@ -210,23 +210,68 @@ section#shop{
 
 @media screen and (max-width: 600px){
 
-  .navbar ul {
-    width: 90%;
-    margin:0 5%;
-    justify-content: space-evenly;
+  .navbar {
+    display: none;
+    background-color: rgba(0,0,0,0);
+    width: 10vw;
   }
 
+  .navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    translate: -50% -50%;
+    width: 30vw;
+    padding: 0;
+    margin: 0;
+  }
+  
   .navbar ul li {
     margin: 0;
-    padding: 0.5em;
+    padding: 0;
   }
 
-  .burger{
 
+  .burger {
+    position: fixed;
+    right: -50px;
+    top: -50px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: ease 400ms;
+    height: 104px;
+    width: 104px;
+
+  }
+
+  .burger-open{
+    right: -150vh;
+    top: -150vh;
+    height: 300vh;
+    width: 300vh;
+  }
+
+  .navbar-open{
+    display: flex;
+  }
+
+  .bars {
+    position: fixed;
+    right:5px;
+    top:5px;
+  }
+  .bars-open{
+    z-index:6;
   }
 
   .bBar {
-    
+    background-color: #fff;
+    width:25px;
+    height: 5px;
+    margin: 3px;
   }
 
   .about-images {
