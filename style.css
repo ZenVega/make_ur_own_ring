@@ -6,12 +6,17 @@
   font-family: 'HKGroteskRegular';
   font-weight: normal;
   font-style: normal;
+  font-size: 18px;
   text-decoration: none;
   box-sizing: border-box;
 }
 
 h1{
   font-size: 30px;
+}
+
+h2{
+  font-size: 22px;
 }
 
 a {
@@ -34,7 +39,7 @@ body {
 .navbar {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   width: 100vw;
   height: 60px;
@@ -63,13 +68,6 @@ body {
   color: #75b6b3;
 }
 
-.nav-icon:hover {
-  color: #75b6b3;
-}
-
-.nav-icon {
-  color: white;
-}
 
 section {
   display: flex;
@@ -124,7 +122,8 @@ section#box{
 
 
 
-section#about {
+section#how2 {
+  margin-top: 15vh;
   flex-direction: column;
   justify-content: left;
 }
@@ -149,7 +148,6 @@ section#about {
 
 section#how{
   margin: 60px 0;
-  
 }
 
 .how-text {
@@ -203,13 +201,7 @@ section#how{
   left: 63vw;
 }
 
-
-
-
-
-
-
-section#me {
+section#about {
   background: url('images/section_3/aboutMe.png') no-repeat center right;
   background-size: 100vh auto ;
   background-color: #000;
@@ -220,9 +212,55 @@ section#me {
   height: 100vh;
 }
 
-section#me .me-text {
-  padding: 3rem;
+section#about .me-text {
+  padding: 4vw;
   width: 50%;
+}
+
+section#events {
+  padding: 4vh 4vw;
+
+}
+
+section#events h1{
+  align-self: flex-start;
+  margin: 4vh 0 0 0;
+}
+
+section#events p{
+  width: 92vw;
+  margin: 4vh 0;
+}
+
+.events-img-container{
+  width: 92vw;
+  display: flex;
+  justify-content: space-between;
+}
+.events-img-container img{
+  width: 32%;
+}
+
+.market-container{
+  margin: 4vh;
+  width: 92vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center left ;
+}
+#market-list {
+  width: 50%;
+}
+
+#market-logos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#market-logos img{
+  width: 12vh;
 }
 
 #shopLink {
@@ -237,6 +275,21 @@ section#me .me-text {
   background-color: white;
 }
 
+section#contact {
+  text-align: center;
+}
+section#contact span{
+  margin-bottom: 10vh;
+}
+
+.nav-icon:hover {
+  color: #75b6b3;
+}
+
+.nav-icon {
+  color: #333;
+}
+
 section#shop{
   background-image: url("./images/section_5/workshop.jpg");
   background-repeat: no-repeat;
@@ -246,7 +299,7 @@ section#shop{
   height: 100vh;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 800px){
 
   .navbar {
     display: none;
@@ -274,6 +327,7 @@ section#shop{
 
 
   .burger {
+    z-index: 4;
     position: fixed;
     right: -50px;
     top: -50px;
