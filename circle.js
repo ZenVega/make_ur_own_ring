@@ -21,10 +21,13 @@ function draw(){
   ellipse(width/2, height/2, width/60*27.5)
   noCursor();
     
-  noStroke();
-  fill(250,0,0);
-  ellipse(mouseX, mouseY, 5);
+  noFill();
+  stroke(0,0,0);
+  ellipse(mouseX, mouseY, 20);
+  stroke(255);
+  ellipse(mouseX, mouseY, 21);
 
+  noStroke();
   strokeWeight(1)
     fill(color1);
   additionalShapes.map(shape => {
