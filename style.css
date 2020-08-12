@@ -163,7 +163,9 @@ section#how2 {
   justify-content: space-between;
   width: 92vw;
 }
-
+#swipe-tag-examples{
+  display: none;
+}
 .about-images img{
   width: 30vw;
   margin-bottom: 1vw;
@@ -435,23 +437,13 @@ section#contact span a{
     margin: 3px;
   }
 
-  .about-images {
-    top: 10vh;
-    flex-wrap: wrap;
-  }
-  .about-images img{
-    width: 92vw;
-    padding: 2vw 0;
-    margin: 0;
-  }
-
   /* SECTION HOME */
   #logo-text{
     width: 100%;
   }
   
   /* SECTION BOX */
-
+  
   section#theBox{
     color: #333;
   }
@@ -475,8 +467,40 @@ section#contact span a{
     margin-bottom: 4vw;
      
   }
-
+  
   /* SECTION HOW */
+
+  .slider-examples {
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 92vw;
+    height: 92vw;
+    overflow: hidden;
+  }
+
+  #swipe-tag-examples{
+    display: block;
+    position: absolute; 
+    z-index:2;
+    left:50%;
+    top: 42vw;
+    translate: -50%;
+  }
+
+  .about-images {
+    flex-wrap: unset;
+    height:92vw;
+    width: 828vw;
+    transition: 400ms;
+  }
+
+  .about-images img{
+    width: 92vw;
+    margin: 0;
+  }
+
 
   section#how{
     flex-direction: column;
@@ -497,7 +521,7 @@ section#contact span a{
   }
   
   #swipe-tag {
-  display: block;
+   display: block;
    position: absolute; 
    z-index:2;
    left:50%;

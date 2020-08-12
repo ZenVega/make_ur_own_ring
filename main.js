@@ -8,11 +8,11 @@ bars.addEventListener('click', ()=> {
   burger.classList.toggle('burger-open');
   navbar.classList.toggle('navbar-open');
   bars.classList.toggle('bars-open');
-  console.log(burger.classList , navbar.classList)
 })
 
 //slider
 const swipeTag = document.querySelector("#swipe-tag");
+const swipeTagExample = document.querySelector("#swipe-tag-examples");
 
 let descriptions = [];
 descriptions[1] = document.querySelector("#d1");
@@ -21,45 +21,86 @@ descriptions[3] = document.querySelector("#d3");
 descriptions[4] = document.querySelector("#d4");
 
 
+const goToSlide = (container, slideNumber) => {
+  container.style.transform = "translateX(-" + (slideNumber-1)*92 + "vw)";
+  if(container === slideContainer){
+    descriptions.map(description => description.style.display = "none");
+    descriptions[slideNumber].style.display = "block";
+  }
+}
+//SLIDER HOW
+
+let currentSlide = 1;
 const slider = document.querySelector(".slider");
 const slideContainer = document.querySelector('.how-images');
-let currentSlide = 1;
-
 
 //swipe left
-  slider.addEventListener('swiped-left', () => {
-    swipeTag.style.display = 'none';
-    if(currentSlide == 4){
+slider.addEventListener('swiped-left', () => {
+  swipeTag.style.display = 'none';
+  if(currentSlide == 4){
+    return;
+  } else {
+    currentSlide++;
+  }
+  goToSlide(slideContainer, currentSlide);
+})  
+
+slider.addEventListener('click', () => {
+  swipeTag.style.display = 'none';
+  if(currentSlide == 4){
+    return;
+  } else {
+    currentSlide++;
+  }
+  goToSlide(slideContainer, currentSlide);
+})  
+
+//swipe-right
+slider.addEventListener('swiped-right', () => {
+  if(currentSlide == 1){
+    return;
+  } else {
+    currentSlide--;
+  }
+  goToSlide(slideContainer, currentSlide);
+})
+
+
+//SLIDER EXAMPLES
+
+let currentExampleSlide = 1;
+const sliderExamples = document.querySelector(".slider-examples");
+const slideContainerExamples = document.querySelector('.about-images');
+
+//swipe left
+sliderExamples.addEventListener('swiped-left', () => {
+    swipeTagExample.style.display = 'none';
+    if(currentExampleSlide == 9){
       return;
     } else {
-      currentSlide++;
+      currentExampleSlide++;
     }
-    goToSlide(currentSlide);
+    goToSlide(slideContainerExamples, currentExampleSlide);
   })  
   
-  slider.addEventListener('click', () => {
-    swipeTag.style.display = 'none';
-    if(currentSlide == 4){
+  sliderExamples.addEventListener('click', () => {
+    swipeTagExample.style.display = 'none';
+    if(currentExampleSlide == 9){
       return;
     } else {
-      currentSlide++;
+      currentExampleSlide++;
     }
-    goToSlide(currentSlide);
+    goToSlide(slideContainerExamples, currentExampleSlide);
   })  
 
 //swipe-right
-  slider.addEventListener('swiped-right', () => {
-    if(currentSlide == 1){
+sliderExamples.addEventListener('swiped-right', () => {
+    if(currentExampleSlide == 1){
       return;
     } else {
-      currentSlide--;
+      currentExampleSlide--;
     }
-    goToSlide(currentSlide);
+    goToSlide(slideContainerExamples, currentExampleSlide);
   })
 
-const goToSlide = (slideNumber) => {
-  slideContainer.style.transform = "translateX(-" + (currentSlide-1)*92 + "vw)";
-  descriptions.map(description => description.style.display = "none");
-  descriptions[currentSlide].style.display = "block";
-}
 
