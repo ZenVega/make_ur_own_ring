@@ -6,7 +6,7 @@
   font-family: 'HKGroteskRegular';
   font-weight: normal;
   font-style: normal;
-  font-size: 18px;
+  font-size: 22px;
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -110,7 +110,7 @@ translate: -50%;
 
    /* SECTION BOX */
 
-section#box{
+section#theBox{
   color: #333;
 }
 
@@ -118,8 +118,8 @@ section#box{
   width: 92vw;
   text-align: right;
   display: flex;
-  align-items: top;
-  
+  align-items: center;
+  gap: 4vw;
 }
 
 .text-container{
@@ -246,13 +246,21 @@ section#about .me-text {
    /* SECTION EVENTS */
 
 section#events {
+  display: flex;
   padding: 4vh 4vw;
+  justify-content: center;
+  text-align: left;
 
 }
 
-section#events h1{
+#workshops-header{
   align-self: flex-start;
   margin: 4vh 0 0 0;
+}
+
+#markets-header{
+  align-self: center;
+  translate: -105%;
 }
 
 section#events p{
@@ -275,18 +283,20 @@ section#events p{
   width: 92vw;
   display: flex;
   flex-wrap: wrap;
-  align-items:center left ;
+  align-items:center;
+  gap:4vw;
 }
 #market-list {
-  width: 50%;
+  width: 45%;
+  text-align: right;
 }
 
 #market-logos {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 #market-logos img{
   width: 12vh;
@@ -357,6 +367,9 @@ section#contact span a{
 
 @media screen and (max-width: 850px){
   
+  *{
+    font-size: 18px;
+  }
   .navbar {
     display: none;
     background-color: rgba(0,0,0,0);
@@ -428,7 +441,8 @@ section#contact span a{
   }
   .about-images img{
     width: 92vw;
-    padding: 4vw 0;
+    padding: 2vw 0;
+    margin: 0;
   }
 
   /* SECTION HOME */
@@ -438,7 +452,7 @@ section#contact span a{
   
   /* SECTION BOX */
 
-  section#box{
+  section#theBox{
     color: #333;
   }
   
@@ -481,6 +495,7 @@ section#contact span a{
     width: 92vw;
     height: 92vw;
   }
+  
   #swipe-tag {
   display: block;
    position: absolute; 
@@ -557,6 +572,7 @@ section#contact span a{
     }
     
     section#events h1{
+      translate: 0;
       align-self: flex-start;
       margin: 4vh 0 0 0;
     }
@@ -580,6 +596,7 @@ section#contact span a{
     }
     #market-list {
       width: 100%;
+      text-align: left;
     }
     #market-list li{
       margin: 2vw 0;
