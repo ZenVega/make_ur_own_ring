@@ -80,19 +80,13 @@ section ul{
   list-style: none;
 }
 
-/* SECTION IMAGES */
+/* SECTION HOME */
 
 section#home {
-  /* background: url('images/section_1/Make_Your_Own_Ring_All_black.png')no-repeat center center; */
-  background-size: 60vh;
- 
-  background-position: inherit inherit;
   height: 100vh;
   text-align: center;
 }
-.logo-container {
 
-}
 section#home h1{
 
   position: absolute;
@@ -114,48 +108,51 @@ left: 50vw;
 translate: -50%;
 }
 
+   /* SECTION BOX */
 
 section#box{
   color: #333;
-  height: 100vh;
 }
 
 .box-container{
   width: 92vw;
-  height: 100vh;
   text-align: right;
   display: flex;
-  align-items: center;
+  align-items: top;
   
 }
 
 .text-container{
-  margin: 2vw;
+  margin: 2vw 0;
   display: flex;
   flex-direction: column;
   height: 350px;
   justify-content: space-between;
 }
 
+#box-img-in-container{
+  display: none;
+}
+
 #box-img{
-  margin: 2vw;
+  margin: 2vw 0;
   width: 50vw;
   height:50vw;
 }
 
 
 
-
+   /* SECTION HOW */
 
 section#how2 {
-  margin-top: 5vh;
   flex-direction: column;
   justify-content: left;
+ 
 }
 
 .about-text {
   width: 92vw;
-  margin: 4vw;
+  padding: 4vw 0vw 2vw 0vw;
 }
 
 
@@ -163,12 +160,13 @@ section#how2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 92vw;
 }
 
 .about-images img{
-  width: 33%;
-  padding: 5px;
+  width: 30vw;
+  margin-bottom: 1vw;
 }
 
 section#how{
@@ -226,6 +224,8 @@ section#how{
   left: 63vw;
 }
 
+   /* SECTION ABOUT */
+
 section#about {
   background: url('images/section_me/aboutMe.png') no-repeat center right;
   background-size: 100vh auto ;
@@ -242,6 +242,8 @@ section#about .me-text {
   width: 50%;
   line-height: 1.8;
 }
+
+   /* SECTION EVENTS */
 
 section#events {
   padding: 4vh 4vw;
@@ -290,6 +292,7 @@ section#events p{
   width: 12vh;
 }
 
+   /* SECTION SHOP */
 
 section#shop{
   background-image: url("./images/section_5/workshop.jpg");
@@ -425,8 +428,41 @@ section#contact span a{
   }
   .about-images img{
     width: 92vw;
-    margin-top: 3vh;
+    padding: 4vw 0;
   }
+
+  /* SECTION HOME */
+  #logo-text{
+    width: 100%;
+  }
+  
+  /* SECTION BOX */
+
+  section#box{
+    color: #333;
+  }
+  
+  .text-container{
+    width: 92vw;
+    height: auto;
+    text-align: left;
+  }
+
+  #box-img-in-container{
+    display: block;
+    margin-top: 4vw;
+    width: 92vw;
+  }
+
+  #box-img{
+    display:none;
+  }
+  #box-list{
+    margin-bottom: 4vw;
+     
+  }
+
+  /* SECTION HOW */
 
   section#how{
     flex-direction: column;
@@ -487,5 +523,77 @@ section#contact span a{
     display: none;
   }
   
+    /* SECTION ABOUT */
+
+    section#about {
+      background: url('images/section_me/aboutMe.png') no-repeat center top;
+      background-size: 92vw  ;
+      text-align: left;
+      align-items: flex-start;
+      justify-content: center;
+      color:#fff;
+      height: auto;
+    }
+    
+      #about-text-p1 {
+      margin-top: 95vw;
+      color:#333;
+      width:92vw;
+      line-height: 1.5;
+      font-weight: bold;
+    }
+      #about-text-p2 {
+      margin-top: 2vw;
+      color:#333;
+      width:92vw;
+      line-height: 1.5;
+    }
+
+    /* SECTION EVENTS */
   
+    section#events {
+      padding: 4vh 4vw;
+    
+    }
+    
+    section#events h1{
+      align-self: flex-start;
+      margin: 4vh 0 0 0;
+    }
+    
+    section#events p{
+      width: 92vw;
+      margin: 4vh 0;
+    }
+    
+    .events-img-container{
+      flex-wrap: wrap;
+    }
+    .events-img-container img{
+      width: 100%;
+      padding:  2vw 0;
+    }
+    
+    .market-container{
+      margin: 4vh;
+      width: 92vw;
+    }
+    #market-list {
+      width: 100%;
+    }
+    #market-list li{
+      margin: 2vw 0;
+      font-size: 16px;
+    }
+    
+    #market-logos {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #market-logos img{
+      margin-top:4vw;
+      width: 20vw;
+    }
 }
