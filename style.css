@@ -22,7 +22,7 @@ h2{
 }
 
 a {
-  color: #fff;
+  color: #333;
 }
 
 body {
@@ -44,9 +44,7 @@ body {
   z-index: 5;
   display: flex;
   width: 100vw;
-  height: 60px;
-  background: #000;
-  opacity: 0.7;
+  background-color: white;
 }
 
 .navbar ul {
@@ -63,7 +61,7 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
 }
 
 .navbar ul li a:hover {
@@ -245,6 +243,48 @@ section#about .me-text {
   line-height: 1.8;
 }
 
+   /* SECTION SHOP */
+
+section#shop{
+  color: #333;
+}
+
+#shop-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#link-container{
+  width:150px;
+  height:150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#shopLink {
+  display: flex;
+  width:120px;
+  height:120px;
+  margin: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border:solid #333 60px;
+  color: white;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+
+#shopLink:hover{
+
+  border:solid #333 15px; 
+  color:#333;
+}
+
    /* SECTION EVENTS */
 
 section#events {
@@ -306,44 +346,7 @@ section#events p{
 
    /* SECTION SHOP */
 
-section#shop{
-  background-image: url("./images/section_5/workshop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  text-align: center;
-  color:#fff;
-  height: 100vh;
-}
 
-#shop-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #333;
-  opacity: 0.8;
-  border-radius: 10px;
-  padding: 15px;
-  align-items: center;
-  height: 220px;
-  width: 220px;
-}
-
-#shopLink {
-  color: #fff;
-  transition: all 0.3s;
-  border: solid 2px #fff;
-  border-radius: 10px;
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-}
-
-
-#shopLink:hover{
-  background-color: #fff;
-  color: #333;
-}
 
 
 .nav-icon:hover {
@@ -358,19 +361,33 @@ section#contact {
   text-align: center;
   margin-top: 5vh;
 }
-section#contact span{
-  margin:  2vh 5vw;
-  padding: 3vh;
-}
-section#contact span a{
-  margin: 2vh;
+
+
+
+#social-media{
+  padding: 15px 10px; 
 }
 
+#top-scroll-section{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#top-scroll{
+  color: #333;
+  padding: 20px;
+  font-weight: bold;
+}
+#top-scroll:hover{
+  color: #75b6b3;
+}
 
 @media screen and (max-width: 850px){
   
   *{
     font-size: 18px;
+    text-align: center;
   }
   .navbar {
     display: none;
@@ -396,6 +413,9 @@ section#contact span a{
     padding: 0;
   }
 
+  .navbar ul li a {
+    color: white;
+  }
 
   .burger {
     z-index: 4;
@@ -491,8 +511,9 @@ section#contact span a{
     position: absolute; 
     z-index:2;
     left:50%;
-    top: 42vw;
+    bottom: 5vw;
     translate: -50%;
+    font-weight: bold;
   }
 
   .about-images {
@@ -511,6 +532,7 @@ section#contact span a{
   section#how{
     flex-direction: column;
     text-align: center;
+    margin-top:0;
   }
   .how-text {
     position: relative;
@@ -531,8 +553,10 @@ section#contact span a{
    position: absolute; 
    z-index:2;
    left:50%;
-   top: 42vw;
+   bottom: 5vw;
    translate: -50%;
+   font-weight: bold;
+   border-radius: 10px;
   }
 
   .slide-container{
@@ -603,13 +627,16 @@ section#contact span a{
     
     section#events h1{
       translate: 0;
-      align-self: flex-start;
       margin: 4vh 0 0 0;
     }
     
     section#events p{
       width: 92vw;
       margin: 4vh 0;
+    }
+
+    #workshops-header{
+      align-self: center;
     }
     
     .events-img-container{
