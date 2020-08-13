@@ -432,7 +432,25 @@ section#contact {
     transition: ease 400ms;
     height: 104px;
     width: 104px;
+  }
 
+  .burger:hover .bar1 {
+    translate: 0 9px;
+    color:#333;
+  }
+  .burger:hover .bar2 {
+    transition-delay: 0.2s;
+    width:26px;
+    height:26px;
+    border-radius: 50%;
+    background:#333;
+    border: solid #fff 4px;
+    z-index: 6;
+    translate: 0 -45%;
+  }
+  .burger:hover .bar3 {
+    translate: 0 -9px;
+    color:#333;
   }
 
   .burger-open{
@@ -450,16 +468,38 @@ section#contact {
     position: fixed;
     right:5px;
     top:5px;
+    transition: 200ms;
   }
   .bars-open{
     z-index:6;
   }
-
+  .bars-open .bar1{
+    transform: rotate(-45deg);
+    translate: 0 12px;
+  }
+  .bars-open .bar2{
+    display:none;
+  }
+  
+  .bars-open .bar3{
+    transform: rotate(45deg);
+    translate: 0 -4px;
+  }
   .bBar {
+    position: fixed;
+    top:5px;
+    right: 5px;
     background-color: #fff;
-    width:25px;
+    width:26px;
     height: 5px;
-    margin: 3px;
+    margin: 4px;
+    transition: 300ms;
+  }
+  .bar2{
+   top: 14px; 
+  }
+  .bar3{
+   top: 23px; 
   }
 
   /* SECTION HOME */
