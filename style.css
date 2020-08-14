@@ -31,7 +31,6 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
-
 }
 
 .container {
@@ -207,8 +206,9 @@ section#how{
 }
 
 .descriptions h3{
-  padding: 1vw;
+  padding: 0 1vw ;
   width: 22vw;
+  text-align: center;
 }
 
 #i1{
@@ -224,24 +224,7 @@ section#how{
   left: 63vw;
 }
 
-   /* SECTION ABOUT */
-
-section#about {
-  background: url('images/section_me/aboutMe.png') no-repeat center right;
-  background-size: 100vh auto ;
-  background-color: #000;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: center;
-  color:#fff;
-  height: 100vh;
-}
-
-section#about .me-text {
-  padding: 4vw;
-  width: 50%;
-  line-height: 1.8;
-}
+ 
 
    /* SECTION SHOP */
 
@@ -318,52 +301,81 @@ section#events p{
   margin-bottom: 8vh;
 }
 .events-img-container img{
-  width: 32%;
+  width: 30vw;
 }
 
 .market-container{
   margin: 4vh;
   width: 92vw;
   display: flex;
-  flex-wrap: wrap;
   align-items:center;
-  gap:4vw;
+  justify-content: center;
 }
 #market-list {
-  width: 45%;
+  width: 59vw;
   text-align: right;
+  margin-right: 1vw;
 }
 
 #market-logos {
-  width: 45%;
+  width: 28vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-evenly;
 }
 #market-logos img{
   width: 12vh;
+  margin: 10px 0;
 }
 
-   /* SECTION SHOP */
+/* SECTION ABOUT */
 
+section#about {
+  padding: 4vw;
+  text-align: right;
+  align-items: flex-start;
+  justify-content: center;
+  color:#fff;
+}
 
+.about-container{
+  display: flex;
+  width: 100%;
+}
 
+section#about img{
+  margin-left: 2vw;
+}
+
+.me-text {
+  color: #333;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about-text-p1 {
+  font-weight: bold;
+}
+.me-text p{
+  font-size: 20px;
+}
+
+.nav-icon {
+  color: #333;
+margin: 0 5px;
+}
 
 .nav-icon:hover {
   color: #75b6b3;
 }
 
-.nav-icon {
-  color: #333;
-}
 
 section#contact {
   text-align: center;
   margin-top: 5vh;
 }
-
-
 
 #social-media{
   padding: 15px 10px; 
@@ -454,10 +466,10 @@ section#contact {
   }
 
   .burger-open{
-    right: -150vh;
-    top: -150vh;
-    height: 300vh;
-    width: 300vh;
+    right: -300vh;
+    top: -300vh;
+    height: 600vh;
+    width: 600vh;
   }
 
   .navbar-open{
@@ -636,32 +648,6 @@ section#contact {
   #d2, #d3, #d4 {
     display: none;
   }
-  
-    /* SECTION ABOUT */
-
-    section#about {
-      background: url('images/section_me/aboutMe.png') no-repeat center top;
-      background-size: 92vw  ;
-      text-align: left;
-      align-items: flex-start;
-      justify-content: center;
-      color:#fff;
-      height: auto;
-    }
-    
-      #about-text-p1 {
-      margin-top: 95vw;
-      color:#333;
-      width:92vw;
-      line-height: 1.5;
-      font-weight: bold;
-    }
-      #about-text-p2 {
-      margin-top: 2vw;
-      color:#333;
-      width:92vw;
-      line-height: 1.5;
-    }
 
     /* SECTION EVENTS */
   
@@ -695,6 +681,7 @@ section#contact {
     .market-container{
       margin: 4vh;
       width: 92vw;
+      flex-wrap: wrap;
     }
     #market-list {
       width: 100%;
@@ -715,4 +702,34 @@ section#contact {
       margin-top:4vw;
       width: 20vw;
     }
+
+      
+    /* SECTION ABOUT */
+
+    section#about {
+      text-align: left;
+      align-items: flex-start;
+      justify-content: center;
+      color:#fff;
+      height: auto;
+    }
+
+    .about-container{
+      flex-direction: column-reverse;
+    }
+    section#about img{
+      margin: 0;
+      width: 100%;
+    }
+    
+    #about-text-p1 {
+      margin-top: 2vw;
+      line-height: 1.5;
+    }
+
+    #about-text-p2 {
+      color:#333;
+      line-height: 1.5;
+    }
+
 }
