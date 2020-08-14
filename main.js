@@ -1,8 +1,37 @@
+//nav disappear on scroll
+const navbar = document.querySelector('.navbar'); 
+
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+
+  let currentScrollPos = window.pageYOffset;
+  
+    if (prevScrollpos > currentScrollPos) {
+  
+      navbar.style.top = "0";
+  
+    } else {
+  
+      navbar.style.top = "-120px";
+  
+    }
+  
+    prevScrollpos = currentScrollPos;
+  
+  }
+
+
 //burger
 const burger = document.querySelector('#burger'); 
 const bars = document.querySelector('#bars');
-const navbar = document.querySelector('.navbar'); 
+const links = document.querySelectorAll(".nav-link");
+const linksArr = [...links];
 
+linksArr.map(link => link.addEventListener('click', ()=> {
+  burger.classList.toggle('burger-open');
+  navbar.classList.toggle('navbar-open');
+  bars.classList.toggle('bars-open');
+}))
 
 bars.addEventListener('click', ()=> {
   burger.classList.toggle('burger-open');

@@ -16,6 +16,7 @@ html{
 h1{
   font-size: 30px;
   line-height: 1.2;
+  font-weight: bold;
 }
 
 h2{
@@ -46,6 +47,8 @@ body {
   display: flex;
   width: 100vw;
   background-color: white;
+  transition: 300ms;
+  border-bottom: solid 2px;
 }
 
 .navbar ul {
@@ -57,7 +60,8 @@ body {
 
 .navbar ul li {
   margin: 0 1rem;
-  padding: 1rem;
+  padding: 1vh;
+
 }
 
 .navbar ul li a {
@@ -123,8 +127,8 @@ section#theBox{
   margin: 2vw 0;
   display: flex;
   flex-direction: column;
-  height: 350px;
-  justify-content: space-between;
+  height: 50vw;
+  justify-content: space-evenly;
 }
 
 #box-img-in-container{
@@ -274,9 +278,6 @@ section#shop{
 section#events {
   display: flex;
   padding: 4vh 4vw;
-  justify-content: center;
-  text-align: left;
-
 }
 
 #workshops-header{
@@ -285,8 +286,8 @@ section#events {
 }
 
 #markets-header{
-  align-self: center;
-  translate: -105%;
+  align-self: flex-end;
+  margin-right: 31vw;
 }
 
 section#events p{
@@ -311,6 +312,12 @@ section#events p{
   align-items:center;
   justify-content: center;
 }
+
+#markets-header{
+  align-self: flex-end;
+  margin-right: 31vw;
+}
+
 #market-list {
   width: 59vw;
   text-align: right;
@@ -353,6 +360,7 @@ section#about img{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
 }
 
 #about-text-p1 {
@@ -360,11 +368,19 @@ section#about img{
 }
 .me-text p{
   font-size: 20px;
+  margin-bottom: 2vw;
+}
+
+.me-text a{
+}
+
+.me-text a:hover{
+  color: #75b6b3;
 }
 
 .nav-icon {
   color: #333;
-margin: 0 5px;
+  margin: 0 5px;
 }
 
 .nav-icon:hover {
@@ -432,6 +448,12 @@ section#contact {
 
   .navbar ul li a {
     color: white;
+    margin-bottom: 5px;
+  }
+  .navbar ul li i {
+    color: white;
+    margin: 0 3px;
+
   }
 
   .burger {
@@ -446,13 +468,49 @@ section#contact {
     width: 104px;
   }
 
+  .burger-open{
+    right: -300vh;
+    top: -300vh;
+    height: 600vh;
+    width: 600vh;
+  }
+  .bars {
+    position: fixed;
+    right:5px;
+    top:5px;
+    transition: 200ms;
+  }
+  
+  .bars-open{
+    z-index:6;
+  }
+
+  .bBar {
+    position: absolute;
+    background-color: #fff;
+    width:26px;
+    height: 5px;
+    margin: 4px;
+    transition: 300ms;
+    right: 0px;
+  }
+  .bar2{
+    top:9px;
+    
+  }
+  .bar3{
+    top:18px;
+
+  }
+
+
   .burger:hover .bar1 {
     translate: 0 9px;
     color:#333;
   }
+
   .burger:hover .bar2 {
     transition-delay: 0.2s;
-    width:26px;
     height:26px;
     border-radius: 50%;
     background:#333;
@@ -465,29 +523,13 @@ section#contact {
     color:#333;
   }
 
-  .burger-open{
-    right: -300vh;
-    top: -300vh;
-    height: 600vh;
-    width: 600vh;
-  }
-
   .navbar-open{
     display: flex;
   }
 
-  .bars {
-    position: fixed;
-    right:5px;
-    top:5px;
-    transition: 200ms;
-  }
-  .bars-open{
-    z-index:6;
-  }
   .bars-open .bar1{
     transform: rotate(-45deg);
-    translate: 0 12px;
+    translate: 0 10px;
   }
   .bars-open .bar2{
     display:none;
@@ -495,23 +537,7 @@ section#contact {
   
   .bars-open .bar3{
     transform: rotate(45deg);
-    translate: 0 -4px;
-  }
-  .bBar {
-    position: fixed;
-    top:5px;
-    right: 5px;
-    background-color: #fff;
-    width:26px;
-    height: 5px;
-    margin: 4px;
-    transition: 300ms;
-  }
-  .bar2{
-   top: 14px; 
-  }
-  .bar3{
-   top: 23px; 
+    translate: 0 -8px;
   }
 
   /* SECTION HOME */
@@ -683,6 +709,11 @@ section#contact {
       width: 92vw;
       flex-wrap: wrap;
     }
+    #markets-header{
+      align-self: center;
+    }
+
+
     #market-list {
       width: 100%;
       text-align: left;
