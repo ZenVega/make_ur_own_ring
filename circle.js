@@ -2,30 +2,38 @@ let canvas;
 let circle=[];
 let color1 = (0,0,0)
 let color2 = (255,255,255)
+let inReach = false;
+let distance;
 
 function setup(){
-  canvas = createCanvas(0.5 * windowHeight,0.5 * windowHeight);
+  canvas = createCanvas(0.8 * windowHeight,0.8 * windowHeight);
   canvas.parent('logo');
   canvas.style.position = 'relative';
   canvas.style('z-index', '-1')
   frameRate(20);
   additionalShapes = [];
 }    
- 
+
 function draw(){
+  cursor(ARROW)
   background(255,255,255);
   noStroke();
   fill(0);
-  ellipse(width/2, height/2, width/60*39)
+  ellipse(width/2, height/2, width/60*39*5/8)
   fill(250);
-  ellipse(width/2, height/2, width/60*27.5)
-  noCursor();
-    
-  noFill();
-  stroke(0,0,0);
-  ellipse(mouseX, mouseY, 20);
-  stroke(255);
-  ellipse(mouseX, mouseY, 21);
+  ellipse(width/2, height/2, width/60*27.5*5/8)
+  inReach = distance < width/3 && distance > width/20? true: false;
+  distance = dist(width/2, height/2, mouseX, mouseY);
+
+  
+    if (inReach){
+      noCursor();
+      noFill();
+      stroke(0,0,0);
+      ellipse(mouseX, mouseY, 20);
+      stroke(255);
+      ellipse(mouseX, mouseY, 21);
+    }
 
   noStroke();
   strokeWeight(1)
@@ -45,8 +53,7 @@ function draw(){
 
 function mousePressed(){
   let hit = false;
-  let distance = dist(width/2, height/2, mouseX, mouseY);
-    if (distance < width/2 && distance > width/12){
+    if (inReach){
       hit = true;
     }
   if(hit){
@@ -59,7 +66,7 @@ function mousePressed(){
         size: random(width/20,width/5)
       })
     } else {
-      let size = random(width/30,width/10);
+      let size = random(width/55,width/16);
       let polygon = [];
       let points = 1;
       let divisor = PI*2/360;

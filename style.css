@@ -101,7 +101,7 @@ section#home {
 #logo-text{
   position: relative;
   text-align: center;
-  top:-8vh;
+  top:-24vh;
   font-size: 9vh;
   font-weight: bold;
   color: #000;
@@ -234,6 +234,7 @@ section#how{
 
 section#shop{
   color: #333;
+  padding:0 4vw;  
 }
 
 #shop-text{
@@ -380,7 +381,7 @@ section#about img{
 
 .nav-icon {
   color: #333;
-  margin: 0 5px;
+/*   margin: 0 3px; */
 }
 
 .nav-icon:hover {
@@ -560,6 +561,10 @@ section#contact {
     width: 92vw;
     height: auto;
     text-align: left;
+  }
+
+  #preHead{
+    margin-bottom: 4vw;
   }
 
   #box-img-in-container{
@@ -756,11 +761,16 @@ section#contact {
     #about-text-p1 {
       margin-top: 2vw;
       line-height: 1.5;
+      align-self: center;
     }
 
     #about-text-p2 {
       color:#333;
       line-height: 1.5;
+    }
+
+    .me-text a{
+      align-self: center;
     }
 
 }
