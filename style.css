@@ -11,6 +11,7 @@ html{
   font-size: 22px;
   text-decoration: none;
   box-sizing: border-box;
+  color: #333;
 }
 
 h1{
@@ -32,6 +33,7 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
+  padding: 4vw;
 }
 
 .container {
@@ -45,10 +47,11 @@ body {
   top: 0;
   z-index: 5;
   display: flex;
+  left: 0;
   width: 100vw;
-  background-color: white;
   transition: 300ms;
   border-bottom: solid 2px;
+  background-color: #fff;
 }
 
 .navbar ul {
@@ -91,7 +94,6 @@ section#home {
 }
 
 #logo-container{
-  border: green 5px;
   display: flex;
   flex-direction: column;
 }
@@ -105,9 +107,7 @@ section#home {
   font-size: 9vh;
   font-weight: bold;
   color: #000;
-
 }
-
 
    /* SECTION BOX */
 
@@ -116,10 +116,7 @@ section#theBox{
 }
 
 .box-container{
-  width: 92vw;
-  text-align: right;
   display: flex;
-  align-items: center;
   gap: 4vw;
 }
 
@@ -141,17 +138,12 @@ section#theBox{
   height:50vw;
 }
 
-
-
    /* SECTION HOW */
 
 section#how2 {
-  flex-direction: column;
-  justify-content: left;
- 
 }
 
-.about-text {
+.about-text{
   width: 92vw;
   padding: 4vw 0vw 2vw 0vw;
 }
@@ -162,23 +154,22 @@ section#how2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 92vw;
 }
 
 .examples-container img{
   width: 30vw;
+  margin-bottom: 1vw;
 }
 
 section#how{
   margin: 60px 0;
+  display: block;
 }
 
 .how-text {
-  margin-right: 4vw;
-  margin-bottom: 2vh;
-  align-self: flex-end;
+  margin-bottom: 4vw;
+  align-self: flex-start;
 }
-
 
 .swipe-tag {
   display: none;
@@ -186,68 +177,45 @@ section#how{
 
 
 .steps-container {
-  width: 92vw;
   display: flex;
-  justify-content: space-between;
 }
 
 .steps-container img{
-  width: 22vw;
-  height: 22vw;
+
 }
 
 .descriptions{
   display: flex;
-  width: 92vw;
-  justify-content: space-between;
+
 }
 
 .descriptions h3{
-  padding: 0 1vw ;
-  width: 22vw;
   text-align: center;
+  flex: 1;
 }
 
    /* SECTION SHOP */
 
 section#shop{
-  color: #333;
-  padding:0 4vw;  
-}
-
-#shop-text{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#link-container{
-  margin-top: 20px;
-  width:150px;
-  height:150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
 }
 
 #shopLink {
   display: flex;
   width:120px;
   height:120px;
-  margin: 15px;
+  margin: 4vw;
   align-items: center;
   justify-content: center;
-  text-align: center;
   border:solid #333 60px;
   color: white;
   border-radius: 50%;
   transition: 300ms;
 }
 
-
 #shopLink:hover{
-
   border:solid #333 15px; 
   color:#333;
 }
@@ -255,19 +223,12 @@ section#shop{
    /* SECTION EVENTS */
 
 section#events {
-  display: flex;
-  padding: 4vh 4vw;
 }
 
 #workshops-header{
   align-self: flex-start;
-  margin: 4vh 0 0 0;
 }
 
-#markets-header{
-  align-self: flex-end;
-  margin-right: 31vw;
-}
 
 section#events p{
   width: 92vw;
@@ -275,82 +236,73 @@ section#events p{
 }
 
 .workshops-container{
-  width: 92vw;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 8vh;
+  width: 92vw;
+  gap: 1vw;
 }
 .workshops-container img{
-  width: 30vw;
-}
-
-.market-container{
-  margin: 4vh;
-  width: 92vw;
-  display: flex;
-  align-items:center;
-  justify-content: center;
+flex:1;
 }
 
 #markets-header{
-  align-self: flex-end;
-  margin-right: 31vw;
+  margin-top: 4vw;
+  align-self: start;
+}
+.market-container{
+  width: 92vw;
+  display: flex;
+  gap: 1vw;
 }
 
-#market-list {
-  width: 59vw;
-  text-align: right;
-  margin-right: 1vw;
-}
 
 #market-logos {
-  width: 28vw;
+  flex:1;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 #market-logos img{
   width: 12vh;
   margin: 10px 0;
 }
+#market-list {
+  flex:2;
+  text-align: left;
+}
+
 
 /* SECTION ABOUT */
 
 section#about {
-  padding: 4vw;
-  text-align: right;
-  align-items: flex-start;
-  justify-content: center;
-  color:#fff;
+  margin-top: 4vw;
+  display: block;
 }
 
+#about-header{
+  margin-bottom: 2vw;
+}
 .about-container{
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  gap: 1vw;
 }
 
-section#about img{
-  margin-left: 2vw;
+#about-image{
+  flex:1;
 }
 
 .me-text {
+  flex:1;
   color: #333;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
 }
 
-#about-text-p1 {
-  font-weight: bold;
-}
 .me-text p{
   font-size: 20px;
   margin-bottom: 2vw;
-}
-
-.me-text a{
 }
 
 .me-text a:hover{
@@ -359,9 +311,7 @@ section#about img{
 
 .nav-icon {
   color: #333;
-/*   margin: 0 3px; */
 }
-
 .nav-icon:hover {
   color: #75b6b3;
 }
