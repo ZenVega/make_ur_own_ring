@@ -69,6 +69,7 @@ const goToSlide = (container, slideNumber) => {
 }
 
 if(window.innerWidth <= 850){
+ //swipe left
 
   sliders.map(slider => slider.addEventListener('click', ()=> {
 
@@ -95,6 +96,36 @@ if(window.innerWidth <= 850){
         return;
       } else {
         currentSlideWorkshops++;
+        goToSlide(slideContainerWorkshops, currentSlideWorkshops)
+      }
+    };
+  }))
+
+  sliders.map(slider => slider.addEventListener('swiped-right', ()=> {
+
+    if(slider.nextElementSibling.className.indexOf('swipe-tag') != -1){
+      slider.nextElementSibling.style.opacity = "0";
+    };
+
+    if(slider.id === 'examples-slider'){
+      if(currentSlideExamples == 1){
+        return;
+      } else {
+        currentSlideExamples--;
+        goToSlide(slideContainerExamples, currentSlideExamples)
+      }
+    } else if (slider.id === 'steps-slider'){
+      if(currentSlideSteps == 1){
+        return;
+      } else {
+        currentSlideSteps--;
+        goToSlide(slideContainerSteps, currentSlideSteps)
+      }
+    } else if (slider.id === 'workshops-slider'){
+      if(currentSlideWorkshops == 1){
+        return;
+      } else {
+        currentSlideWorkshops--;
         goToSlide(slideContainerWorkshops, currentSlideWorkshops)
       }
     };
