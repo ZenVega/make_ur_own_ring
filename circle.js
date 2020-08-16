@@ -63,7 +63,7 @@ function mousePressed(){
         case: 'ellipse',
         x:mouseX,
         y: mouseY,
-        size: random(width/20,width/5)
+        size: random(width/30,width/8)
       })
     } else {
       let size = random(width/55,width/16);
