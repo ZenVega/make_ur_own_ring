@@ -178,6 +178,7 @@ section#how{
 
 .steps-container {
   display: flex;
+  gap: 1vw;
 }
 
 .steps-container img{
@@ -186,11 +187,12 @@ section#how{
 
 .descriptions{
   display: flex;
+  gap:1vw;
 
 }
 
 .descriptions h3{
-  text-align: center;
+
   flex: 1;
 }
 
@@ -264,7 +266,7 @@ flex:1;
 }
 #market-logos img{
   width: 12vh;
-  margin: 10px 0;
+
 }
 #market-list {
   flex:2;
@@ -328,7 +330,6 @@ section#contact {
 
 #top-scroll-section{
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
 }
 
@@ -342,6 +343,9 @@ section#contact {
   color: #75b6b3;
 }
 
+
+
+
 @media screen and (max-width: 850px){
   
   *{
@@ -351,42 +355,23 @@ section#contact {
   h1{
     font-size: 25px;
   }
+
   .navbar {
     display: none;
-    background-color: rgba(0,0,0,0);
-    width: 10vw;
   }
 
-  .navbar ul {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 50vw;
-    top: 50vh;
-    translate: -50% -50%;
-    width: 30vw;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar ul li {
-    margin: 0;
-    padding: 0;
-  }
 
-  .navbar ul li a {
-    color: white;
+  .navbar a {
+    color: #fff;
     margin-bottom: 5px;
   }
-  .navbar ul li i {
+  .navbar i {
     color: white;
     margin: 0 3px;
 
   }
 
   .burger {
-    z-index: 4;
     position: fixed;
     right: -50px;
     top: -50px;
@@ -396,22 +381,24 @@ section#contact {
     height: 104px;
     width: 104px;
   }
-
+  
   .burger-open{
     right: -300vh;
     top: -300vh;
     height: 600vh;
     width: 600vh;
+    z-index:2;
   }
   .bars {
     position: fixed;
     right:5px;
     top:5px;
     transition: 200ms;
+    z-index:10;
   }
   
   .bars-open{
-    z-index:6;
+    z-index:10;
   }
 
   .bBar {
@@ -422,6 +409,7 @@ section#contact {
     margin: 4px;
     transition: 300ms;
     right: 0px;
+    z-index: 10;
   }
   .bar2{
     top:9px;
@@ -432,12 +420,12 @@ section#contact {
 
   }
 
+  /* burger hover animation */
 
   .burger:hover .bar1 {
     translate: 0 9px;
-    color:#333;
+    background-color:#333;
   }
-
   .burger:hover .bar2 {
     transition-delay: 0.2s;
     height:26px;
@@ -446,14 +434,26 @@ section#contact {
     border: solid #fff 4px;
     z-index: 6;
     translate: 0 -45%;
+    z-index: 11;
   }
   .burger:hover .bar3 {
     translate: 0 -9px;
-    color:#333;
+    background-color:#333;
   }
 
   .navbar-open{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: #75b6b3;
+  }
+  .navbar-open a{
+    z-index: 4;
   }
 
   .bars-open .bar1{
