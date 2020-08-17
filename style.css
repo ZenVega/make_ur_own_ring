@@ -551,6 +551,7 @@ section#contact {
   #preHead{
     position: absolute;
     top: 90vh;
+    width: 92vw;
   }
 
   #box-img-in-container{
@@ -662,10 +663,10 @@ section#contact {
   
   #market-logos {
     width: 100%;
- 
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 20px;
   }
   #market-logos img{
     margin-top:4vw;
