@@ -223,6 +223,9 @@ section#theBox{
   right: 4vw;
 }
 
+#click-to-enlarge{
+  display:none;
+}
 /* SECTION HOW 2 */
 
 section#how{
@@ -553,6 +556,12 @@ section#contact {
     width: 30vw;
     height: 30vw;
   }
+
+
+#click-to-enlarge{
+  display:unset;
+}
+
 
   section#how{
     flex-direction: column;
