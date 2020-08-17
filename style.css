@@ -354,18 +354,6 @@ section#contact {
     font-size: 25px;
   }
 
-  .mobile-nav{
-    width: 100vw;
-    position: absolute;
-    top:0;
-    left:0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
   .navbar {
     display: none;
   }
@@ -405,6 +393,7 @@ section#contact {
     transition: ease 400ms;
     height: 110px;
     width: 110px;
+    z-index:5;
   }
   
   .burger-open{
@@ -514,7 +503,7 @@ section#contact {
   
   /* SLIDER */
 
-  .slider {
+/*   .slider {
     display: flex;
     flex-direction: row;
     width: 92vw;
@@ -532,9 +521,9 @@ section#contact {
   .slide-container img{
     height:92vw;
     width:92vw;
-  }
+  } */
   
-  .swipe-tag{
+/*   .swipe-tag{
     display: block;
     position: relative; 
     z-index:3;
@@ -543,12 +532,20 @@ section#contact {
     transform: translateX(-50%);
     font-weight: bold;
     width: 100%;
-  }
+  } */
 
   /* SECTION HOW */
 
-  .examples-container{
+/*   .examples-container{
     flex-wrap: nowrap;
+  } */
+
+  .examples-container img{
+    width: 49%;
+  }
+
+  #first-example{
+    width:100%;
   }
 
   section#how{
@@ -558,9 +555,21 @@ section#contact {
   }
   .how-text {
     position: relative;
-    margin: 4vw;
     width: 92vw;
+    margin-bottom: 20vw;
   }
+
+  .steps-container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .steps-container h3{
+    transform: translateY(-40px);
+  }
+  .steps-container img{
+   margin-top: -15vw;
+  }
+
 
   .descriptions{
     text-align: center;
@@ -571,7 +580,7 @@ section#contact {
     width: 92vw;
   }
 
-  #d2, #d3, #d4 {
+  #d1,#d2, #d3, #d4 {
     display: none;
   }
 
@@ -579,7 +588,6 @@ section#contact {
   
     section#events {
       padding: 4vh 4vw;
-    
     }
     
     section#events h1{
@@ -596,18 +604,18 @@ section#contact {
       align-self: center;
     }
     
-    .events-img-container{
+    .workshops-container{
       flex-wrap: wrap;
     }
-    .events-img-container img{
-      width: 100%;
-      padding:  2vw 0;
+    .workshops-container img{
+      width: 100vw;
     }
     
     .market-container{
       margin: 4vh;
       width: 92vw;
       flex-wrap: wrap;
+      flex-direction: column;
     }
     #markets-header{
       align-self: center;
@@ -640,13 +648,14 @@ section#contact {
     section#about {
       text-align: left;
       align-items: flex-start;
+  
       justify-content: center;
       color:#fff;
       height: auto;
     }
 
     .about-container{
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
     section#about img{
       margin: 0;
