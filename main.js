@@ -16,20 +16,21 @@ window.onscroll = function() {
 
 //burger
 const burger = document.querySelector('#burger'); 
-const bars = document.querySelector('#bars');
 const links = document.querySelectorAll(".nav-link");
+const container = document.querySelector('.container');
 const linksArr = [...links];
+const hoverBox = document.querySelector('#hover-box');
 
 linksArr.map(link => link.addEventListener('click', ()=> {
   burger.classList.toggle('burger-open');
   navbar.classList.toggle('navbar-open');
-  bars.classList.toggle('bars-open');
+  container.classList.toggle('container-open');
 }))
 
-bars.addEventListener('click', ()=> {
+hoverBox.addEventListener('click', ()=> {
   burger.classList.toggle('burger-open');
   navbar.classList.toggle('navbar-open');
-  bars.classList.toggle('bars-open');
+  container.classList.toggle('container-open');
 })
 
 

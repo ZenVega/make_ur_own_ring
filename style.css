@@ -27,6 +27,7 @@ h2{
 
 a {
   color: #333;
+  text-decoration: none;
 }
 
 body {
@@ -37,15 +38,17 @@ body {
 }
 
 .container {
-  width: 100%;
-  height: 100%;
   overflow-x: hidden;
+}
+.container-open {
+  overflow-y: hidden;
+  height: 50vh;
 }
 
 .navbar {
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 3;
   display: flex;
   left: 0;
   width: 100vw;
@@ -54,25 +57,20 @@ body {
   background-color: #fff;
 }
 
-.navbar ul {
+.navbar  {
   display:flex;
   list-style: none;
   width: 100%;
   justify-content: center;
 }
 
-.navbar ul li {
+.navbar a {
   margin: 0 1rem;
   padding: 1vh;
-
 }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: #333;
-}
 
-.navbar ul li a:hover {
+.navbar a:hover {
   color: #75b6b3;
 }
 
@@ -356,30 +354,57 @@ section#contact {
     font-size: 25px;
   }
 
+  .mobile-nav{
+    width: 100vw;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
   .navbar {
     display: none;
   }
-
 
   .navbar a {
     color: #fff;
     margin-bottom: 5px;
   }
-  .navbar i {
+  .navbar a i {
     color: white;
     margin: 0 3px;
-
   }
 
+
+  .navbar-open{
+    position: absolute;
+    display: flex;
+    width: unset;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background-color: unset;
+    overflow-x: hidden;
+  
+  }
+  .navbar-open a{
+  }
+
+  
   .burger {
     position: fixed;
-    right: -50px;
-    top: -50px;
+    right: -55px;
+    top: -55px;
     background-color: #333;
     border-radius: 50%;
     transition: ease 400ms;
-    height: 104px;
-    width: 104px;
+    height: 110px;
+    width: 110px;
   }
   
   .burger-open{
@@ -387,87 +412,70 @@ section#contact {
     top: -300vh;
     height: 600vh;
     width: 600vh;
-    z-index:2;
-  }
-  .bars {
-    position: fixed;
-    right:5px;
-    top:5px;
-    transition: 200ms;
-    z-index:10;
-  }
-  
-  .bars-open{
-    z-index:10;
+    z-index: 2;
   }
 
   .bBar {
-    position: absolute;
+    position: fixed;
     background-color: #fff;
     width:26px;
     height: 5px;
     margin: 4px;
     transition: 300ms;
-    right: 0px;
-    z-index: 10;
+    right: 5px;
+    z-index:7;
+  }
+
+  .bar1{
+    top:5px;
   }
   .bar2{
-    top:9px;
-    
+    top:14px;
   }
   .bar3{
-    top:18px;
-
+    top:23px;
   }
 
   /* burger hover animation */
+  
+  #hover-box{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top:0;
+    right: 0;
+    z-index: 20;
+  }
 
-  .burger:hover .bar1 {
-    translate: 0 9px;
+  #hover-box:hover ~ .bBar{
+    background-color: #75b6b3;
+  }
+
+  .burger-open .bar1{
+    transform: translateY(9px);
     background-color:#333;
   }
-  .burger:hover .bar2 {
+  .burger-open .bar2{
     transition-delay: 0.2s;
     height:26px;
     border-radius: 50%;
     background:#333;
     border: solid #fff 4px;
     z-index: 6;
-    translate: 0 -45%;
+    transform: translateY(-45%);
     z-index: 11;
   }
-  .burger:hover .bar3 {
-    translate: 0 -9px;
+  
+  .burger-open .bar3{
+    transform: translateY(-9px);
     background-color:#333;
   }
 
-  .navbar-open{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    background-color: #75b6b3;
-  }
-  .navbar-open a{
-    z-index: 4;
+  .burger-open .burger{
+    height:100vh;
+    overflow-x:hidden;
   }
 
-  .bars-open .bar1{
-    transform: rotate(-45deg);
-    translate: 0 10px;
-  }
-  .bars-open .bar2{
-    display:none;
-  }
-  
-  .bars-open .bar3{
-    transform: rotate(45deg);
-    translate: 0 -8px;
-  }
 
   /* SECTION HOME */
   #logo-text{
@@ -532,7 +540,7 @@ section#contact {
     z-index:3;
     left: 46vw;
     bottom:15vw;
-    translate: -50%;
+    transform: translateX(-50%);
     font-weight: bold;
     width: 100%;
   }
@@ -575,7 +583,7 @@ section#contact {
     }
     
     section#events h1{
-      translate: 0;
+      transform: translateX(0);
       margin: 4vh 0 0 0;
     }
     

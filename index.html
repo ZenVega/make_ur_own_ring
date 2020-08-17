@@ -16,22 +16,24 @@
 </head>
 <body>
   <div class="container">
+
     <div id="burger" class="burger">
-      <div id="bars" class="bars">
-        <div class="bBar bar1"></div>
-        <div class="bBar bar2"></div>
-        <div class="bBar bar3"></div>
+      <div id="hover-box"></div>
+      <div class="bBar bar1"></div>
+      <div class="bBar bar2"></div>
+      <div class="bBar bar3"></div>
       </div>
-    </div>
-    <nav class="navbar">
-        <a class="nav-link" href="#theBox">box</a>
-        <a class="nav-link" href="#how2">how</a>
-        <a class="nav-link" href="#events">events</a>
-        <a class="nav-link" href="#about">about</a>
-        <a href="https://shop.makeyourownring.nl/">shop</a>
-        <a href="https://www.instagram.com/makeyourownring/"><i class="fa fa-instagram nav-icon" ></i></a>
-        <a href="https://www.facebook.com/makeyourownring"><i class="fa fa-facebook-official nav-icon" aria-hidden="true"></i></a>
-    </nav>
+
+      <nav class="navbar">
+          <a class="nav-link" href="#theBox">box</a>
+          <a class="nav-link" href="#how2">how</a>
+          <a class="nav-link" href="#events">events</a>
+          <a class="nav-link" href="#about">about</a>
+          <a href="https://shop.makeyourownring.nl/">shop</a>
+          <a href="https://www.instagram.com/makeyourownring/"><i class="fa fa-instagram nav-icon" ></i></a>
+          <a href="https://www.facebook.com/makeyourownring"><i class="fa fa-facebook-official nav-icon" aria-hidden="true"></i></a>
+      </nav>
+
     <section id="home">
       <div id="logo-container">
         <div id="logo"></div>
@@ -98,8 +100,8 @@
     </section>
 
     <section id="shop">
-        <h1>Get your own box and start building</h1>
-          <a  href="https://shop.makeyourownring.nl/" id="shopLink">SHOP</a>
+        <h1 data-aos="fade-right">Get your own box and start building</h1>
+          <a data-aos-offset="400" data-aos="zoom-in" href="https://shop.makeyourownring.nl/" id="shopLink">SHOP</a>
     </section>
 
     <section id="events" >
@@ -157,8 +159,8 @@
         <br>
         follow for updates and to see more examples of rings!</p>
         <span >
-          <a href="https://www.instagram.com/makeyourownring/"><i id="social-media"  class="fa fa-instagram fa-2x nav-icon" ></i></a>
-          <a href="https://www.facebook.com/makeyourownring"><i id="social-media"  class="fa fa-facebook-official fa-2x nav-icon" aria-hidden="true"></i></a>
+          <a data-aos-delay="100" data-aos="zoom-in" href="https://www.instagram.com/makeyourownring/"><i id="social-media"  class="fa fa-instagram fa-2x nav-icon" ></i></a>
+          <a data-aos-delay="200" data-aos="zoom-in" href="https://www.facebook.com/makeyourownring"><i id="social-media"  class="fa fa-facebook-official fa-2x nav-icon" aria-hidden="true"></i></a>
         </span>
       </section>
       <section id="top-scroll-section">
@@ -168,8 +170,7 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
-      offset: 80,
-      delay: 200
+      offset: 80
     });
   </script>
   <script src="src/swiped-events.min.js"></script>
