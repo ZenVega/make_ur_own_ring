@@ -53,8 +53,17 @@ body {
   left: 0;
   width: 100vw;
   transition: 300ms;
-  border-bottom: solid 2px;
   background-color: #fff;
+
+  box-shadow:
+  0 1px 2.2px rgba(0, 0, 0, 0.034),
+  0 2px 5.3px rgba(0, 0, 0, 0.048),
+  0 4px 10px rgba(0, 0, 0, 0.06),
+  0 8px 17.9px rgba(0, 0, 0, 0.072),
+  0 12px 33.4px rgba(0, 0, 0, 0.086),
+  0 20px 80px rgba(0, 0, 0, 0.05)
+;
+  
 }
 
 .navbar  {
@@ -138,14 +147,10 @@ section#theBox{
 
    /* SECTION HOW */
 
-section#how2 {
-}
-
 .about-text{
   width: 92vw;
   padding: 4vw 0vw 2vw 0vw;
 }
-
 
 .examples-container{
   display: flex;
@@ -169,29 +174,18 @@ section#how{
   align-self: flex-start;
 }
 
-.how-pair{
-  width: 22vw;
-  height: 22vw;
-  display: flex;
-  flex-direction: column;
-}
-
-
 .steps-container {
   display: flex;
   gap: 1vw;
 }
 
-
-/* .descriptions{
+.how-pair{
+  width: 22vw;
   display: flex;
-  gap:1vw;
-
-} */
-
-.descriptions h3{
-
-  flex: 1;
+  flex-direction: column;
+}
+.how-pair img{
+  height:22vw;
 }
 
    /* SECTION SHOP */
@@ -222,13 +216,9 @@ section#shop{
 
    /* SECTION EVENTS */
 
-section#events {
-}
-
 #workshops-header{
   align-self: flex-start;
 }
-
 
 section#events p{
   width: 92vw;
@@ -291,6 +281,7 @@ section#about {
 
 #about-image{
   flex:1;
+  width: 48vw;
 }
 
 .me-text {
@@ -364,7 +355,7 @@ section#contact {
     margin-bottom: 5px;
     font-size: 22px;
   }
-  
+
   .navbar a i {
     color: white;
     margin: 0 3px;
@@ -524,6 +515,8 @@ section#contact {
   
   .how-pair{
     width: 45vw;
+  }
+  .how-pair img{
     height: 45vw;
   }
 
@@ -654,6 +647,9 @@ section#shop{
     display: flex;
     flex-direction: column;
     margin-bottom: -40px;
+  }
+  .how-pair img{
+    height: 92vw;
   }
 
 }
