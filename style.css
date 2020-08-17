@@ -121,16 +121,15 @@ section#home {
 
 section#theBox{
   color: #333;
+  width: 92vw;
 }
 
 .box-container{
   display: flex;
-  display: -webkit-flex;
-  display: -webkit-box;
 }
 
 .text-container{
-  margin-left: 2vw;
+  flex:1;
   display: flex;
   flex-direction: column;
   height: 50vw;
@@ -142,6 +141,7 @@ section#theBox{
 }
 
 #box-img{
+  flex:1;
   margin-right: 2vw;
   width: 50vw;
   height:50vw;
@@ -544,15 +544,23 @@ section#contact {
   }
   
   .text-container{
-    width: 92vw;
+    flex:1;
     height: auto;
-    text-align: left;
+    text-align: center;
   }
 
   #preHead{
+    font-size: 25px;
     position: absolute;
     top: 90vh;
+    text-align: center;
     width: 92vw;
+  }
+
+  #box-head{
+    position: absolute;
+    top: 105vh;
+    align-self: center;
   }
 
   #box-img-in-container{
@@ -708,6 +716,15 @@ section#contact {
     margin-bottom: 4vw;
   }
 
+  
+    #preHead{
+      position: relative;
+      top:-100px;
+    }
+    #box-head{
+      position: relative;
+      top: -40px;
+    }
 }
 
 
