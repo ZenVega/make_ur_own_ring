@@ -172,10 +172,6 @@ section#theBox{
   background-size: cover;
   position: fixed;
   background-color: turquoise;
-  top:50%;
-  transform: translateY(-50%);
-  width: 92vw;
-  height:92vw;
   z-index:20;
 
   box-shadow:
@@ -184,9 +180,29 @@ section#theBox{
   0 4px 10px rgba(0, 0, 0, 0.06),
   0 8px 17.9px rgba(0, 0, 0, 0.072),
   0 12px 33.4px rgba(0, 0, 0, 0.086),
-  0 20px 80px rgba(0, 0, 0, 0.05)
-;
+  0 20px 80px rgba(0, 0, 0, 0.05);
 }
+
+@media screen and (orientation:portrait) {   
+  #example-modal{
+    top:50%;
+    transform: translateY(-50%);
+    width: 92vw;
+    height:92vw; 
+  }
+}
+
+@media screen and (orientation:landscape) {
+    #example-modal{
+    top:50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 92vh;
+    height:92vh; 
+  }
+}
+
+
 #close-button{
   position: absolute;
   top:50%;

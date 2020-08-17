@@ -1,6 +1,8 @@
+
 let mobile = (window.innerWidth <= 850);
+
 window.addEventListener('resize', () => {
-  mobile = (window.innerWidth <= 850);
+  mobile = window.innerWidth <= 850;
   AOS.refresh();
 })
 
@@ -10,14 +12,14 @@ const navbar = document.querySelector('.navbar');
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
-
-    if (prevScrollpos > currentScrollPos) {
-      navbar.style.top = "0";
-    } else {
-      navbar.style.top = "-120px";
-    }
-    prevScrollpos = currentScrollPos;
+  
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-120px";
   }
+  prevScrollpos = currentScrollPos;
+}
 
 
 //burger
@@ -41,7 +43,7 @@ hoverBox.addEventListener('click', ()=> {
 
 
 const goToSlide = (container, slideNumber) => {
-
+  
   container.style.transform = "translateX(-" + (slideNumber-1)*92 + "vw)";
   if(container === slideContainerSteps){
     descriptions.map(description => description.style.display = "none");
@@ -49,7 +51,7 @@ const goToSlide = (container, slideNumber) => {
   }
 }
 
-//example-modal
+  //example-modal
 const modal = document.querySelector('#example-modal');
 const exitBtn = document.querySelector('#close-button');
 const arrowL = document.querySelector('#arrow-left');
@@ -60,6 +62,7 @@ let currentIndex;
 exitBtn.addEventListener('click', ()=> modal.style.display = "none" );
 
 const openModal = (index) => {
+  console.log('open')
   currentIndex = index;
   let src = imageArray[index].src; 
   modal.style.backgroundImage = `url(${src})`; 
