@@ -1,4 +1,6 @@
 
+
+
 let mobile = (window.innerWidth <= 850);
 
 window.addEventListener('resize', () => {

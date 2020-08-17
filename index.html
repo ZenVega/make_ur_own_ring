@@ -45,7 +45,7 @@
       <div class="box-container">
         <img id="box-img" src="images/section_box/SOPHIA_WEBSITE_PRODUCTPHOTOS-2.jpg" alt="">
         <div class="text-container">
-          <p id="preHead"> Always wanted to design your own silver ring? Or are you looking for a perfect personal gift for a friend or loved one? </p>
+          <p id="preHead" data-aos="fade-up" data-aos-delay="200"> Always wanted to design your own silver ring? Or are you looking for a perfect personal gift for a friend or loved one? </p>
           <h1 id="box-head" data-aos="fade-up">The box includes everything you need to get started</h1>
           <img id="box-img-in-container" src="images/section_box/SOPHIA_WEBSITE_PRODUCTPHOTOS-021.jpg" alt="">
           <ul id="box-list">
@@ -62,7 +62,7 @@
       <div class="about-text" data-aos="fade-up">
         <h1>This is what some of the finished silver rings look like</h1>
       </div>
-      <div class="slide-container examples-container">
+      <div class="examples-container">
         <img class="example-image" data-aos="zoom-in" src="images/section_how/SOPHIA_WEBSITE_PRODUCTPHOTOS-033.jpg" alt="">
         <img class="example-image" data-aos="zoom-in" data-aos-delay="200" src="images/section_how/SOPHIA_WEBSITE_PRODUCTPHOTOS-035.jpg" alt="">
         <img class="example-image" data-aos="zoom-in" data-aos-delay="300" src="images/section_how/SOPHIA_WEBSITE_PRODUCTPHOTOS-039.jpg" alt="">
@@ -76,14 +76,14 @@
       <p id="click-to-enlarge" >click to enlarge</p>
     </section>
     <div id="example-modal">
-      <h1 id="close-button">x</h1>
-      <i id="arrow-left" class="fa fa-angle-left fa-3x " ></i>
-      <i id="arrow-right" class="fa fa-angle-right fa-3x " ></i>
+      <h1 id="close-button" style="transform: rotate(45deg)">+</h1>
+      <h1 id="arrow-right" style="transform: rotate(90deg)">⌃</h1>
+      <h1 id="arrow-left" style="transform: rotate(-90deg)">⌃</h1>
     </div>
 
     <section id="how">
       <h1 class="how-text" data-aos="fade-right">How does it work</h1>
-      <div class="slide-container steps-container">
+      <div class="steps-container">
         <div class="how-pair">
           <img id="i1" src="images/section_how/step1c.png" alt="">
           <h3 id="d1-mobile">Get familiar with the wax</h3>
@@ -98,7 +98,7 @@
         </div>
         <div class="how-pair">
           <img id="i4"src="images/section_how/step4c.png" alt="">      
-          <h3 id="d4-mobile">Receive your polished solid silver product</h3>
+          <h3 id="d4-mobile">Receive your polished sterling silver ring</h3>
         </div>
       </div>
     </section>
@@ -116,7 +116,7 @@
         Filing, sawing and soldering will be a part of the deal and bringing your own stones or objects you would like to integrate in your jewellery is a possibility too.
         <br>
         Send me an email or follow the Instagram account and I will keep you updated with upcoming dates.</p>
-        <div class="slide-container workshops-container" >
+        <div class="workshops-container" >
           <img id="first-workshop" src="images/section_events/events 1.jpg" alt="">
           <img src="images/section_events/events 2.jpg" alt="">
           <img src="images/section_events/events.jpg" alt="">
@@ -176,6 +176,13 @@
   </script>
   <script src="src/swiped-events.min.js"></script>
   <script src="main.js"></script>
+  <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
+  <script>
+    (function () {
+      // initialize the test
+      var test = vhCheck();
+    }());
+  </script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 </body>
 </html>
