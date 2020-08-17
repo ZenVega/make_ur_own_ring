@@ -1,3 +1,9 @@
+let mobile = (window.innerWidth <= 850);
+window.addEventListener('resize', () => {
+  mobile = (window.innerWidth <= 850);
+  AOS.refresh();
+})
+
 //nav disappear on scroll
 const navbar = document.querySelector('.navbar'); 
 
@@ -69,7 +75,8 @@ const goToSlide = (container, slideNumber) => {
   }
 }
 
-if(window.innerWidth <= 850){
+if(mobile){
+
  //swipe left
 
   sliders.map(slider => slider.addEventListener('click', ()=> {

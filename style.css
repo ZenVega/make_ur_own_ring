@@ -179,8 +179,8 @@ section#how{
   gap: 1vw;
 }
 
-.steps-container img{
-
+.steps-container h3{
+  display: none;
 }
 
 .descriptions{
@@ -239,9 +239,10 @@ section#events p{
   display: flex;
   width: 92vw;
   gap: 1vw;
+  flex-direction: row;
 }
 .workshops-container img{
-flex:1;
+width: 33%;
 }
 
 #markets-header{
@@ -367,7 +368,6 @@ section#contact {
     margin: 0 3px;
   }
 
-
   .navbar-open{
     position: absolute;
     display: flex;
@@ -380,10 +380,7 @@ section#contact {
     overflow-x: hidden;
   
   }
-  .navbar-open a{
-  }
 
-  
   .burger {
     position: fixed;
     right: -55px;
@@ -498,54 +495,11 @@ section#contact {
   }
   #box-list{
     margin-bottom: 4vw;
-     
   }
   
-  /* SLIDER */
-
-/*   .slider {
-    display: flex;
-    flex-direction: row;
-    width: 92vw;
-    height: 92vw;
-    overflow: hidden;
-  }
-  
-  .slide-container{
-    text-align: center;
-    position: relative;
-    left: 0vw;
-    height:92vw;
-  }
-
-  .slide-container img{
-    height:92vw;
-    width:92vw;
-  } */
-  
-/*   .swipe-tag{
-    display: block;
-    position: relative; 
-    z-index:3;
-    left: 46vw;
-    bottom:15vw;
-    transform: translateX(-50%);
-    font-weight: bold;
-    width: 100%;
-  } */
-
-  /* SECTION HOW */
-
-/*   .examples-container{
-    flex-wrap: nowrap;
-  } */
 
   .examples-container img{
-    width: 49%;
-  }
-
-  #first-example{
-    width:100%;
+    width: 33%;
   }
 
   section#how{
@@ -557,17 +511,29 @@ section#contact {
     position: relative;
     width: 92vw;
     margin-bottom: 20vw;
+    margin-top: 8vw;
   }
 
   .steps-container{
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
   }
+  
+  .how-pair{
+    width: 45vw;
+    height: 45vw;
+    display: flex;
+    flex-direction: column;
+  }
+
   .steps-container h3{
-    transform: translateY(-40px);
+    display: unset;
+    transform: translateY(-5vw);
   }
   .steps-container img{
-   margin-top: -15vw;
+   width: 100%;
+   
   }
 
 
@@ -584,11 +550,15 @@ section#contact {
     display: none;
   }
 
+     /* SECTION SHOP */
+
+section#shop{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
     /* SECTION EVENTS */
-  
-    section#events {
-      padding: 4vh 4vw;
-    }
     
     section#events h1{
       transform: translateX(0);
@@ -608,7 +578,10 @@ section#contact {
       flex-wrap: wrap;
     }
     .workshops-container img{
-      width: 100vw;
+      width: 49%;
+    }
+    #first-workshop{
+      width: 100%;
     }
     
     .market-container{
@@ -645,36 +618,42 @@ section#contact {
       
     /* SECTION ABOUT */
 
-    section#about {
-      text-align: left;
-      align-items: flex-start;
-  
-      justify-content: center;
-      color:#fff;
-      height: auto;
-    }
-
     .about-container{
       flex-direction: column;
     }
+
     section#about img{
       margin: 0;
       width: 100%;
     }
     
-    #about-text-p1 {
-      margin-top: 2vw;
-      line-height: 1.5;
-      align-self: center;
+    #about-header {
+      margin-top: 4vw;
     }
 
     #about-text-p2 {
       color:#333;
-      line-height: 1.5;
     }
 
-    .me-text a{
-      align-self: center;
-    }
+}
+
+@media screen and (max-width: 500px){
+
+  .how-pair{
+    margin-bottom: 4vw;
+  }
+
+}
+
+
+@media screen and (max-width: 350px){
+
+  .how-pair{
+    width: 92vw;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -40px;
+  }
 
 }
