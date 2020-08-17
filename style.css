@@ -98,6 +98,7 @@ section ul{
 section#home {
   height: 100vh;
   justify-content: center;
+  width: 92vw;
 }
 
 #logo-container{
