@@ -169,8 +169,11 @@ section#how{
   align-self: flex-start;
 }
 
-.swipe-tag {
-  display: none;
+.how-pair{
+  width: 22vw;
+  height: 22vw;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -179,15 +182,12 @@ section#how{
   gap: 1vw;
 }
 
-.steps-container h3{
-  display: none;
-}
 
-.descriptions{
+/* .descriptions{
   display: flex;
   gap:1vw;
 
-}
+} */
 
 .descriptions h3{
 
@@ -362,7 +362,9 @@ section#contact {
   .navbar a {
     color: #fff;
     margin-bottom: 5px;
+    font-size: 22px;
   }
+  
   .navbar a i {
     color: white;
     margin: 0 3px;
@@ -510,7 +512,7 @@ section#contact {
   .how-text {
     position: relative;
     width: 92vw;
-    margin-bottom: 20vw;
+    margin-bottom: 30px;
     margin-top: 8vw;
   }
 
@@ -523,8 +525,6 @@ section#contact {
   .how-pair{
     width: 45vw;
     height: 45vw;
-    display: flex;
-    flex-direction: column;
   }
 
   .steps-container h3{
