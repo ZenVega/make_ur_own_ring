@@ -40,32 +40,6 @@ hoverBox.addEventListener('click', ()=> {
 })
 
 
-//slider
-
-let currentSlideExamples = 1;
-let currentSlideSteps = 1;
-let currentSlideWorkshops = 1;
-
-const maxExamplesSlides = 9;
-const maxStepsSlides = 4;
-const maxWorkshopsSlides = 3;
-
-const slideContainerExamples = document.querySelector('.examples-container');
-const slideContainerSteps = document.querySelector('.steps-container');
-const slideContainerWorkshops = document.querySelector('.workshops-container');
-
-const swipeTagExamples = document.querySelector("#examples-tag")
-const swipeTagSteps = document.querySelector("#steps-tag")
-const swipeTagWorkshops = document.querySelector("#workshops-tag")
-
-const sliders = Array.from(document.querySelectorAll('.slider'));
-
-let descriptions = [];
-descriptions[1] = document.querySelector("#d1");
-descriptions[2] = document.querySelector("#d2");
-descriptions[3] = document.querySelector("#d3");
-descriptions[4] = document.querySelector("#d4");
-
 const goToSlide = (container, slideNumber) => {
 
   container.style.transform = "translateX(-" + (slideNumber-1)*92 + "vw)";
@@ -75,140 +49,47 @@ const goToSlide = (container, slideNumber) => {
   }
 }
 
+//example-modal
+const modal = document.querySelector('#example-modal');
+const exitBtn = document.querySelector('#close-button');
+const arrowL = document.querySelector('#arrow-left');
+const arrowR = document.querySelector('#arrow-right');
+const imageArray = Array.from(document.querySelectorAll('.example-image'));
+let currentIndex;
+
+exitBtn.addEventListener('click', ()=> modal.style.display = "none" );
+
+const openModal = (index) => {
+  currentIndex = index;
+  let src = imageArray[index].src; 
+  modal.style.backgroundImage = `url(${src})`; 
+  modal.style.display = "block"; 
+}
+
+
 if(mobile){
+  imageArray.map((image, index) => {
+    const indexOfImage = index;
+    const src = image.src;
+    image.addEventListener('click', () => {
+      openModal(indexOfImage);
+    })
+  });
 
- //swipe left
-
-  sliders.map(slider => slider.addEventListener('click', ()=> {
-
-    if(slider.nextElementSibling.className.indexOf('swipe-tag') != -1){
-      slider.nextElementSibling.style.opacity = "0";
-    };
-
-    if(slider.id === 'examples-slider'){
-      if(currentSlideExamples == maxExamplesSlides){
-        return;
-      } else {
-        currentSlideExamples++;
-        goToSlide(slideContainerExamples, currentSlideExamples)
-      }
-    } else if (slider.id === 'steps-slider'){
-      if(currentSlideSteps == maxStepsSlides){
-        return;
-      } else {
-        currentSlideSteps++;
-        goToSlide(slideContainerSteps, currentSlideSteps)
-      }
-    } else if (slider.id === 'workshops-slider'){
-      if(currentSlideWorkshops == maxWorkshopsSlides){
-        return;
-      } else {
-        currentSlideWorkshops++;
-        goToSlide(slideContainerWorkshops, currentSlideWorkshops)
-      }
-    };
-  }))
-
-  sliders.map(slider => slider.addEventListener('swiped-right', ()=> {
-
-    if(slider.nextElementSibling.className.indexOf('swipe-tag') != -1){
-      slider.nextElementSibling.style.opacity = "0";
-    };
-
-    if(slider.id === 'examples-slider'){
-      if(currentSlideExamples == 1){
-        return;
-      } else {
-        currentSlideExamples--;
-        goToSlide(slideContainerExamples, currentSlideExamples)
-      }
-    } else if (slider.id === 'steps-slider'){
-      if(currentSlideSteps == 1){
-        return;
-      } else {
-        currentSlideSteps--;
-        goToSlide(slideContainerSteps, currentSlideSteps)
-      }
-    } else if (slider.id === 'workshops-slider'){
-      if(currentSlideWorkshops == 1){
-        return;
-      } else {
-        currentSlideWorkshops--;
-        goToSlide(slideContainerWorkshops, currentSlideWorkshops)
-      }
-    };
-  }))
-  
-/*   //swipe left
-  sliders.map.addEventListener('swiped-left', () => {
-    swipeTagExamples.style.display = 'none';
-    if(currentSlide == 4){
-      return;
+  arrowR.addEventListener('click', ()=> {
+    if(currentIndex === imageArray.length-1){
+      openModal(0)
     } else {
-      currentSlide++;
+      openModal(currentIndex + 1)
     }
-    goToSlide(slideContainer, currentSlide);
-  })  
-  
-  slideContainerExamples.addEventListener('click', () => {
-    console.log('click')
-    swipeTagExamples.style.display = 'none';
-    if(currentSlide == 4){
-      return;
+  })
+  arrowL.addEventListener('click', ()=> {
+    if(currentIndex === 0){
+      openModal(imageArray.length-1)
     } else {
-      currentSlide++;
+      openModal(currentIndex - 1)
     }
-    goToSlide(slideContainer, currentSlide);
-  })   */
-  /* 
-  //swipe-right
-  slider.addEventListener('swiped-right', () => {
-    if(currentSlide == 1){
-      return;
-    } else {
-      currentSlide--;
-    }
-    goToSlide(slideContainer, currentSlide);
   })
   
-  
-  //SLIDER EXAMPLES
-  
-  let currentExampleSlide = 1;
-  const sliderExamples = document.querySelector(".slider-examples");
-  const slideContainerExamples = document.querySelector('.about-images');
-  
-  //swipe left
-  sliderExamples.addEventListener('swiped-left', () => {
-    swipeTagExample.style.display = 'none';
-    if(currentExampleSlide == 9){
-      return;
-    } else {
-      currentExampleSlide++;
-    }
-    goToSlide(slideContainerExamples, currentExampleSlide);
-  })  
-  
-  sliderExamples.addEventListener('click', () => {
-    swipeTagExample.style.display = 'none';
-    if(currentExampleSlide == 9){
-      return;
-    } else {
-      currentExampleSlide++;
-    }
-    goToSlide(slideContainerExamples, currentExampleSlide);
-  })  
-  
-  //swipe-right
-  sliderExamples.addEventListener('swiped-right', () => {
-    if(currentExampleSlide == 1){
-      return;
-    } else {
-      currentExampleSlide--;
-    }
-    goToSlide(slideContainerExamples, currentExampleSlide);
-  })
-  
-   */
   
 }

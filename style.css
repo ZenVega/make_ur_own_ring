@@ -164,6 +164,51 @@ section#theBox{
   margin-bottom: 1vw;
 }
 
+/* EXAMPLE MODAL */
+
+#example-modal{
+  display: none;
+  background: url('images/section_how/SOPHIA_WEBSITE_PRODUCTPHOTOS-033.jpg') center no-repeat;
+  background-size: cover;
+  position: fixed;
+  background-color: turquoise;
+  top:50%;
+  transform: translateY(-50%);
+  width: 92vw;
+  height:92vw;
+  z-index:20;
+
+  box-shadow:
+  0 1px 2.2px rgba(0, 0, 0, 0.034),
+  0 2px 5.3px rgba(0, 0, 0, 0.048),
+  0 4px 10px rgba(0, 0, 0, 0.06),
+  0 8px 17.9px rgba(0, 0, 0, 0.072),
+  0 12px 33.4px rgba(0, 0, 0, 0.086),
+  0 20px 80px rgba(0, 0, 0, 0.05)
+;
+}
+#close-button{
+  position: absolute;
+  top:50%;
+  transform: translateY(-42vw);
+  right: 4vw;
+}
+
+#arrow-left{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 4vw;
+}
+#arrow-right{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 4vw;
+}
+
+/* SECTION HOW 2 */
+
 section#how{
   margin: 60px 0;
   display: block;
@@ -348,6 +393,7 @@ section#contact {
 
   .navbar {
     display: none;
+    box-shadow: unset;
   }
 
   .navbar a {
@@ -426,10 +472,6 @@ section#contact {
     z-index: 20;
   }
 
-  #hover-box:hover ~ .bBar{
-    background-color: #75b6b3;
-  }
-
   .burger-open .bar1{
     transform: translateY(9px);
     background-color:#333;
@@ -492,7 +534,8 @@ section#contact {
   
 
   .examples-container img{
-    width: 33%;
+    width: 30vw;
+    height: 30vw;
   }
 
   section#how{
@@ -526,7 +569,6 @@ section#contact {
   }
   .steps-container img{
    width: 100%;
-   
   }
 
 
@@ -567,14 +609,10 @@ section#shop{
       align-self: center;
     }
     
-    .workshops-container{
-      flex-wrap: wrap;
-    }
+    
     .workshops-container img{
-      width: 49%;
-    }
-    #first-workshop{
-      width: 100%;
+      width: 30vw;
+      height: 30vw;
     }
     
     .market-container{
