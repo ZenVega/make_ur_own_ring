@@ -88,6 +88,8 @@ section ul{
 /* SECTION HOME */
 
 section#home {
+  position:relative;
+  top:-25px;
   height: 100vh;
   justify-content: center;
   width: 92vw;
@@ -202,6 +204,7 @@ section#theBox{
   position: absolute;
   transform: translateY(-42vw);
   right: 4vw;
+  font-weight: bold;
 }
 
 #arrow-left{
@@ -209,12 +212,14 @@ section#theBox{
   top:50%;
   transform: translateY(-50%);
   left: 4vw;
+  font-weight: bold;
 }
 #arrow-right{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
   right: 4vw;
+  font-weight: bold;
 }
 
 
@@ -484,7 +489,10 @@ section#contact {
   }
 
   /* burger hover animation */
-  
+  section#home{
+    top:0px;
+  }
+
   #hover-box{
     position: fixed;
     width: 40px;
@@ -539,7 +547,6 @@ section#contact {
   }
 
   #preHead{
-    font-size: 25px;
     position: absolute;
     top: 90vh;
     text-align: center;
