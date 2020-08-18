@@ -6,11 +6,12 @@ let color1 = (0,0,0)
 let color2 = (255,255,255)
 let inReach = false;
 let distance;
-let startHeight= windowHeight;
+let startHeight;
 
 
 function setup(){
-  canvas = createCanvas(0.8 * 800,0.8 * 800);
+  startHeight = windowHeight;
+  canvas = createCanvas(0.8 * windowHeight,0.8 * windowHeight);
   canvas.parent('logo');
   canvas.style.position = 'relative';
   canvas.style('z-index', '-1')
