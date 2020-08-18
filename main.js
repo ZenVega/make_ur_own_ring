@@ -7,9 +7,9 @@ window.addEventListener('resize', () => {
   mobile = window.innerWidth <= 850;
   AOS.refresh();
 })
+const navbar = document.querySelector('.navbar'); 
 
 /* //nav disappear on scroll
-const navbar = document.querySelector('.navbar'); 
 
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
