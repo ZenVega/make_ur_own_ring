@@ -13,7 +13,7 @@ function preload() {
 
 function setup(){
   startHeight = windowHeight;
-  canvas = createCanvas(0.8 * windowHeight,0.7 * windowHeight);
+  canvas = createCanvas(0.8 * windowHeight,0.8 * windowHeight);
   canvas.parent('logo');
   canvas.style.position = 'relative';
   canvas.style('z-index', '-1')
@@ -38,8 +38,8 @@ function draw(){
   ellipse(width/2, height/2.5, width/60*39*5/8)
   fill(250);
   ellipse(width/2, height/2.5, width/60*27.5*5/8)
-  inReach = distance < width/3 && distance > width/20? true: false;
-  distance = dist(width/2, height/2, mouseX, mouseY);
+  inReach = distance < width/3.4 && distance > width/20? true: false;
+  distance = dist(width/2, height/2.5, mouseX, mouseY);
 
   
     if (inReach){
