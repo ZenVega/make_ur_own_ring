@@ -38,8 +38,9 @@ body {
 }
 
 .container {
-  overflow-x: hidden;
+  overflow: hidden;
 }
+
 .container-open {
   overflow-y: hidden;
   height: 50vh;
@@ -89,7 +90,7 @@ section ul{
 
 section#home {
   position:relative;
-  top:-25px;
+
   height: 100vh;
   justify-content: center;
   width: 92vw;
