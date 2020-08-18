@@ -8,7 +8,7 @@ window.addEventListener('resize', () => {
   AOS.refresh();
 })
 
-//nav disappear on scroll
+/* //nav disappear on scroll
 const navbar = document.querySelector('.navbar'); 
 
 let prevScrollpos = window.pageYOffset;
@@ -21,7 +21,7 @@ window.onscroll = function() {
     navbar.style.top = "-120px";
   }
   prevScrollpos = currentScrollPos;
-}
+} */
 
 
 //burger

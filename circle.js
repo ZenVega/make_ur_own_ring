@@ -6,9 +6,11 @@ let color1 = (0,0,0)
 let color2 = (255,255,255)
 let inReach = false;
 let distance;
+let startHeight= windowHeight;
+
 
 function setup(){
-  canvas = createCanvas(0.8 * windowHeight,0.8 * windowHeight);
+  canvas = createCanvas(0.8 * 800,0.8 * 800);
   canvas.parent('logo');
   canvas.style.position = 'relative';
   canvas.style('z-index', '-1')
@@ -89,5 +91,8 @@ function mousePressed(){
   }  
 
   function windowResized() {
-    resizeCanvas(0.8 * windowHeight, 0.8 * windowHeight);
+    if(Math.abs(windowHeight - startHeight) > 70){
+      startHeight = windowHeight;
+      resizeCanvas(0.8 * windowHeight, 0.8 * windowHeight);
+    }
   }
