@@ -77,6 +77,7 @@ if(mobile){
     const indexOfImage = index;
     const src = image.src;
     image.addEventListener('click', () => {
+      console.log('click')
       openModal(indexOfImage);
     })
   });
