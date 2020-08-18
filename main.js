@@ -7,6 +7,7 @@ window.addEventListener('resize', () => {
   mobile = window.innerWidth <= 850;
   AOS.refresh();
 })
+
 const navbar = document.querySelector('.navbar'); 
 
 /* //nav disappear on scroll
@@ -64,7 +65,6 @@ let currentIndex;
 exitBtn.addEventListener('click', ()=> modal.style.display = "none" );
 
 const openModal = (index) => {
-  console.log('open')
   currentIndex = index;
   let src = imageArray[index].src; 
   modal.style.backgroundImage = `url(${src})`; 
@@ -77,7 +77,6 @@ if(mobile){
     const indexOfImage = index;
     const src = image.src;
     image.addEventListener('click', () => {
-      console.log('click')
       openModal(indexOfImage);
     })
   });
