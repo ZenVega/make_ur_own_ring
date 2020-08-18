@@ -12,32 +12,32 @@ function preload() {
 
 
 function setup(){
-  loadFont()
   startHeight = windowHeight;
-  canvas = createCanvas(0.8 * windowHeight,0.8 * windowHeight);
+  canvas = createCanvas(0.8 * windowHeight,0.7 * windowHeight);
   canvas.parent('logo');
   canvas.style.position = 'relative';
   canvas.style('z-index', '-1')
   frameRate(20);
   additionalShapes = [];
-  background(255,255,255);
-  textFont(hkGrotesk);
-  fill(255,0,0)
-  textAlign(CENTER, CENTER);
-  textSize(0.11*height)
-  text('make your', width/2, height * 0.765);
-  text('own ring', width/2, height * 0.90);
-
+  
+  
   
 }    
 
 function draw(){
+  background(255);
+  textFont(hkGrotesk);
+  fill(0,0,0)
+  textAlign(CENTER, CENTER);
+  textSize(0.135*height)
+  text('make your', width/2, height * 0.7);
+  text('own ring', width/2, height * 0.83);
   cursor(ARROW)
   noStroke();
   fill(0);
-  ellipse(width/2, height/2, width/60*39*5/8)
+  ellipse(width/2, height/2.5, width/60*39*5/8)
   fill(250);
-  ellipse(width/2, height/2, width/60*27.5*5/8)
+  ellipse(width/2, height/2.5, width/60*27.5*5/8)
   inReach = distance < width/3 && distance > width/20? true: false;
   distance = dist(width/2, height/2, mouseX, mouseY);
 
