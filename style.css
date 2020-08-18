@@ -96,7 +96,8 @@ section#home {
 }
 
 #logo{
-  opacity: 1;
+  position: relative;
+  top: -60px;
 }
 
    /* SECTION BOX */
@@ -342,7 +343,7 @@ section#about {
 }
 
 .me-text {
-  flex:2;
+  flex:1;
   width: 44vw;
   color: #333;
   line-height: 1.5;
@@ -515,9 +516,10 @@ section#contact {
 
 
   /* SECTION HOME */
-  #logo-text{
-    width: 100%;
+  #logo{
+    top:0;
   }
+
   
   /* SECTION BOX */
   
