@@ -10,20 +10,8 @@ window.addEventListener('resize', () => {
 
 const navbar = document.querySelector('.navbar'); 
 
-/* //nav disappear on scroll
 
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.top = "0";
-  } else {
-    navbar.style.top = "-120px";
-  }
-  prevScrollpos = currentScrollPos;
-} */
-
+if(mobile){
 
 //burger
 const burger = document.querySelector('#burger'); 
@@ -44,6 +32,7 @@ hoverBox.addEventListener('click', ()=> {
   container.classList.toggle('container-open');
 })
 
+}
 
 const goToSlide = (container, slideNumber) => {
   

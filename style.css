@@ -47,24 +47,17 @@ body {
 }
 
 .navbar {
-  top: 0;
+  position: absolute;
   z-index: 3;
   display: flex;
   left: 0;
   width: 100vw;
-  height: 60px;
+  height: 40px;
   transition: 300ms;
   background-color: #fff;
-
-  
-}
-
-.navbar  {
-  display:flex;
-  list-style: none;
-  width: 100%;
   justify-content: center;
 }
+
 
 .navbar a {
   margin: 0 1rem;
